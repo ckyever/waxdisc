@@ -15,8 +15,32 @@ exports[`App component > Render home page 1`] = `
           Home
         </a>
       </li>
+      <li>
+        <a
+          data-discover="true"
+          href="/shop"
+        >
+          Shop
+        </a>
+      </li>
+      <li>
+        <a
+          data-discover="true"
+          href="/cart"
+        >
+          Cart
+        </a>
+      </li>
     </ul>
   </nav>
+</div>
+`;
+
+exports[`App component > Visit cart page 1`] = `
+<div>
+  <p>
+    This will show the shopping cart
+  </p>
 </div>
 `;
 
@@ -35,7 +59,31 @@ exports[`App component > Visit home page 1`] = `
           Home
         </a>
       </li>
+      <li>
+        <a
+          data-discover="true"
+          href="/shop"
+        >
+          Shop
+        </a>
+      </li>
+      <li>
+        <a
+          data-discover="true"
+          href="/cart"
+        >
+          Cart
+        </a>
+      </li>
     </ul>
   </nav>
+</div>
+`;
+
+exports[`App component > Visit shop page 1`] = `
+<div>
+  <p>
+    This will have the products
+  </p>
 </div>
 `;
