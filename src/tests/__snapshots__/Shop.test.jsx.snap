@@ -38,65 +38,8 @@ exports[`Shop component > Render shop page 1`] = `
         </ul>
       </nav>
     </header>
-    <section>
-      <h2>
-        Products
-      </h2>
-      <ul>
-        <li>
-          <a
-            data-discover="true"
-            href="/product"
-          >
-            Rosalia - LUX
-          </a>
-        </li>
-      </ul>
-    </section>
-  </div>
-</div>
-`;
-
-exports[`Shop component > Visit product on shop page 1`] = `
-<div>
-  <div
-    class="app"
-  >
-    <header>
-      <h1>
-        WAXDISC
-      </h1>
-      <nav>
-        <ul>
-          <li>
-            <a
-              data-discover="true"
-              href="/"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              data-discover="true"
-              href="/shop"
-            >
-              Shop
-            </a>
-          </li>
-          <li>
-            <a
-              data-discover="true"
-              href="/cart"
-            >
-              Cart
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
     <p>
-      Product info goes here
+      Loading...
     </p>
   </div>
 </div>

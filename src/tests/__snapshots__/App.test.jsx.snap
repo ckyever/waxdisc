@@ -181,21 +181,9 @@ exports[`App component > Visit shop page 1`] = `
         </ul>
       </nav>
     </header>
-    <section>
-      <h2>
-        Products
-      </h2>
-      <ul>
-        <li>
-          <a
-            data-discover="true"
-            href="/product"
-          >
-            Rosalia - LUX
-          </a>
-        </li>
-      </ul>
-    </section>
+    <p>
+      Loading...
+    </p>
   </div>
 </div>
 `;

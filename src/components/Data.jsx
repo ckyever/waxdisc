@@ -1,0 +1,59 @@
+import { useState, useEffect } from "react";
+
+const spotifyClientId = "70a9a1201abc47e286e590a11eb013d9";
+const spotifyClientSecret = "4dc32cbf3fc24c34884c9108a55d53d0";
+
+const useProducts = () => {
+  const [spotifyAccessToken, setSpotifyAccessToken] = useState(null);
+  const [products, setProducts] = useState([]);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  // First get access token
+  useEffect(() => {
+    fetch("https://accounts.spotify.com/api/token", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `grant_type=client_credentials&client_id=${spotifyClientId}&client_secret=${spotifyClientSecret}`,
+    })
+      .then((response) => {
+        if (response.status >= 400) {
+          throw new Error("Server error");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        const accessToken = data.access_token;
+        setSpotifyAccessToken(accessToken);
+      })
+      .catch((error) => setError(error));
+  }, []);
+
+  // Get initial products
+  useEffect(() => {
+    if (!spotifyAccessToken) return;
+    fetch(`https://api.spotify.com/v1/browse/new-releases?limit=50`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${spotifyAccessToken}`,
+      },
+    })
+      .then((response) => {
+        if (response.status >= 400) {
+          throw new Error("Server error");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setProducts(data.albums);
+      })
+      .catch((error) => setError(error))
+      .finally(() => setLoading(false));
+  }, [spotifyAccessToken]);
+
+  return { products, error, loading };
+};
+
+export default useProducts;
