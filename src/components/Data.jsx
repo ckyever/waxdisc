@@ -25,13 +25,12 @@ const useProducts = () => {
         return response.json();
       })
       .then((data) => {
-        const accessToken = data.access_token;
-        setSpotifyAccessToken(accessToken);
+        setSpotifyAccessToken(data.access_token);
       })
       .catch((error) => setError(error));
   }, []);
 
-  // Get initial products
+  // Then fetch our products (albums)
   useEffect(() => {
     if (!spotifyAccessToken) return;
     fetch(`https://api.spotify.com/v1/browse/new-releases?limit=50`, {
