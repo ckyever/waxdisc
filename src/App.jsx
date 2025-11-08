@@ -1,4 +1,5 @@
 import "./App.css";
+import { Link } from "react-router";
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <nav>
         <ul>
           <li>
-            <a href="ckyever.com">Home</a>
+            <Link to="/">Home</Link>
           </li>
         </ul>
       </nav>

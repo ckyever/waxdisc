@@ -9,7 +9,8 @@ exports[`App component > Render home page 1`] = `
     <ul>
       <li>
         <a
-          href="ckyever.com"
+          data-discover="true"
+          href="/"
         >
           Home
         </a>
@@ -28,7 +29,8 @@ exports[`App component > Visit home page 1`] = `
     <ul>
       <li>
         <a
-          href="ckyever.com"
+          data-discover="true"
+          href="/"
         >
           Home
         </a>
