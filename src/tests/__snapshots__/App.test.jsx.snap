@@ -135,6 +135,14 @@ exports[`App component > Visit home page 1`] = `
 </div>
 `;
 
+exports[`App component > Visit non-existent page 1`] = `
+<div>
+  <p>
+    I think you might be lost 🧐
+  </p>
+</div>
+`;
+
 exports[`App component > Visit shop page 1`] = `
 <div>
   <div

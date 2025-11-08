@@ -37,4 +37,12 @@ describe("App component", () => {
     await user.click(cartLink);
     expect(container).toMatchSnapshot();
   });
+
+  test("Visit non-existent page", async () => {
+    const router = createMemoryRouter(routes, {
+      initialEntries: ["/fakepage"],
+    });
+    const { container } = render(<RouterProvider router={router} />);
+    expect(container).toMatchSnapshot();
+  });
 });
