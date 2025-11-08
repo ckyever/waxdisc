@@ -1,7 +1,7 @@
 import "./App.css";
 import { Link, Outlet } from "react-router";
 
-function App() {
+const App = () => {
   return (
     <div className="app">
       <header>
@@ -23,6 +23,6 @@ function App() {
       <Outlet />
     </div>
   );
-}
+};
 
 export default App;
