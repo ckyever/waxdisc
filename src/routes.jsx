@@ -1,19 +1,17 @@
 import App from "./App.jsx";
 import Cart from "./components/Cart.jsx";
+import Home from "./components/Home.jsx";
 import Shop from "./components/Shop.jsx";
 
 const routes = [
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "shop",
-    element: <Shop />,
-  },
-  {
-    path: "cart",
-    element: <Cart />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: "shop", element: <Shop /> },
+      { path: "cart", element: <Cart /> },
+    ],
   },
 ];
 

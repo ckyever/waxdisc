@@ -2,88 +2,180 @@
 
 exports[`App component > Render home page 1`] = `
 <div>
-  <h1>
-    WAXDISC
-  </h1>
-  <nav>
-    <ul>
-      <li>
-        <a
-          data-discover="true"
-          href="/"
-        >
-          Home
-        </a>
-      </li>
-      <li>
-        <a
-          data-discover="true"
-          href="/shop"
-        >
-          Shop
-        </a>
-      </li>
-      <li>
-        <a
-          data-discover="true"
-          href="/cart"
-        >
-          Cart
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <div
+    class="app"
+  >
+    <header>
+      <h1>
+        WAXDISC
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <a
+              data-discover="true"
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              data-discover="true"
+              href="/shop"
+            >
+              Shop
+            </a>
+          </li>
+          <li>
+            <a
+              data-discover="true"
+              href="/cart"
+            >
+              Cart
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <p>
+      This is the home page
+    </p>
+  </div>
 </div>
 `;
 
 exports[`App component > Visit cart page 1`] = `
 <div>
-  <p>
-    This will show the shopping cart
-  </p>
+  <div
+    class="app"
+  >
+    <header>
+      <h1>
+        WAXDISC
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <a
+              data-discover="true"
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              data-discover="true"
+              href="/shop"
+            >
+              Shop
+            </a>
+          </li>
+          <li>
+            <a
+              data-discover="true"
+              href="/cart"
+            >
+              Cart
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <p>
+      This will show the shopping cart
+    </p>
+  </div>
 </div>
 `;
 
 exports[`App component > Visit home page 1`] = `
 <div>
-  <h1>
-    WAXDISC
-  </h1>
-  <nav>
-    <ul>
-      <li>
-        <a
-          data-discover="true"
-          href="/"
-        >
-          Home
-        </a>
-      </li>
-      <li>
-        <a
-          data-discover="true"
-          href="/shop"
-        >
-          Shop
-        </a>
-      </li>
-      <li>
-        <a
-          data-discover="true"
-          href="/cart"
-        >
-          Cart
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <div
+    class="app"
+  >
+    <header>
+      <h1>
+        WAXDISC
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <a
+              data-discover="true"
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              data-discover="true"
+              href="/shop"
+            >
+              Shop
+            </a>
+          </li>
+          <li>
+            <a
+              data-discover="true"
+              href="/cart"
+            >
+              Cart
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <p>
+      This is the home page
+    </p>
+  </div>
 </div>
 `;
 
 exports[`App component > Visit shop page 1`] = `
 <div>
-  <p>
-    This will have the products
-  </p>
+  <div
+    class="app"
+  >
+    <header>
+      <h1>
+        WAXDISC
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <a
+              data-discover="true"
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              data-discover="true"
+              href="/shop"
+            >
+              Shop
+            </a>
+          </li>
+          <li>
+            <a
+              data-discover="true"
+              href="/cart"
+            >
+              Cart
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <p>
+      This will have the products
+    </p>
+  </div>
 </div>
 `;
