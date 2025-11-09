@@ -4,6 +4,7 @@ import { useState } from "react";
 
 const App = () => {
   const [cart, setCart] = useState([]);
+
   const addProductToCart = (id, name, quantity, image) => {
     const quantityNumber = Number(quantity);
     const productIndex = cart.findIndex((product) => product.id === id);
@@ -13,6 +14,21 @@ const App = () => {
       setCart(newCart);
     } else {
       setCart([...cart, { id, name, quantity: quantityNumber, image }]);
+    }
+  };
+
+  const deleteProductFromCart = (id) => {
+    const newCart = cart.filter((product) => product.id != id);
+    setCart(newCart);
+  };
+
+  const updateQuantityOfProductFromCart = (id, quantity) => {
+    const quantityNumber = Number(quantity);
+    const productIndex = cart.findIndex((product) => product.id === id);
+    if (productIndex >= 0) {
+      const newCart = [...cart];
+      newCart[productIndex].quantity = quantityNumber;
+      setCart(newCart);
     }
   };
 
@@ -33,9 +49,15 @@ const App = () => {
             </li>
           </ul>
         </nav>
-        <button onClick={() => console.log(cart)}>Test cart</button>
       </header>
-      <Outlet context={{ addProductToCart }} />
+      <Outlet
+        context={{
+          cart,
+          addProductToCart,
+          deleteProductFromCart,
+          updateQuantityOfProductFromCart,
+        }}
+      />
     </div>
   );
 };

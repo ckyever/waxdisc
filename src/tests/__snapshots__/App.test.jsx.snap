@@ -37,9 +37,6 @@ exports[`App component > Render home page 1`] = `
           </li>
         </ul>
       </nav>
-      <button>
-        Test cart
-      </button>
     </header>
     <p>
       Loading...
@@ -85,13 +82,12 @@ exports[`App component > Visit cart page 1`] = `
           </li>
         </ul>
       </nav>
-      <button>
-        Test cart
-      </button>
     </header>
-    <p>
-      This will show the shopping cart
-    </p>
+    <div>
+      <p>
+        Your cart is empty
+      </p>
+    </div>
   </div>
 </div>
 `;
@@ -133,9 +129,6 @@ exports[`App component > Visit home page 1`] = `
           </li>
         </ul>
       </nav>
-      <button>
-        Test cart
-      </button>
     </header>
     <p>
       Loading...
@@ -189,9 +182,6 @@ exports[`App component > Visit shop page 1`] = `
           </li>
         </ul>
       </nav>
-      <button>
-        Test cart
-      </button>
     </header>
     <p>
       Loading...

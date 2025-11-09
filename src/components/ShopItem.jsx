@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { useOutletContext } from "react-router";
 
-const ShopItem = ({ id, name, image }) => {
-  const [quantity, setQuantity] = useState(1);
-  const { addProductToCart } = useOutletContext();
+const ShopItem = ({ id, name, image, initialQuantity = 1, cartView }) => {
+  const [quantity, setQuantity] = useState(initialQuantity);
+  const {
+    addProductToCart,
+    deleteProductFromCart,
+    updateQuantityOfProductFromCart,
+  } = useOutletContext();
 
   return (
     <li>
@@ -13,12 +17,23 @@ const ShopItem = ({ id, name, image }) => {
       <input
         type="number"
         id={`${id}-quantity`}
-        defaultValue={1}
-        onChange={(event) => setQuantity(event.target.value)}
+        defaultValue={initialQuantity}
+        onChange={(event) => {
+          setQuantity(event.target.value);
+          if (cartView) {
+            updateQuantityOfProductFromCart(id, event.target.value);
+          }
+        }}
       ></input>
-      <button onClick={() => addProductToCart(id, name, quantity, image)}>
-        Add to cart
-      </button>
+      {cartView ? (
+        <button onClick={() => deleteProductFromCart(id)}>
+          Remove from cart
+        </button>
+      ) : (
+        <button onClick={() => addProductToCart(id, name, quantity, image)}>
+          Add to cart
+        </button>
+      )}
     </li>
   );
 };

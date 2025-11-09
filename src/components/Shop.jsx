@@ -1,10 +1,8 @@
-import { useOutletContext } from "react-router";
 import useProducts from "./Data.jsx";
 import ShopItem from "./ShopItem.jsx";
 
 const Shop = () => {
   const { products, error, loading } = useProducts("browse/new-releases", 50);
-  const { addProductToCart } = useOutletContext();
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error has occurred</p>;
@@ -23,6 +21,7 @@ const Shop = () => {
                 id={product.id}
                 name={productName}
                 image={image}
+                cartView={false}
               />
             );
           })}

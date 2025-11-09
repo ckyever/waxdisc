@@ -37,9 +37,6 @@ exports[`Shop component > Render shop page 1`] = `
           </li>
         </ul>
       </nav>
-      <button>
-        Test cart
-      </button>
     </header>
     <p>
       Loading...
