@@ -4,15 +4,15 @@ import { useState } from "react";
 
 const App = () => {
   const [cart, setCart] = useState([]);
-  const addProductToCart = (name, quantity, image) => {
-    const productIndex = cart.findIndex((product) => product.name === name);
-    console.log(productIndex);
+  const addProductToCart = (id, name, quantity, image) => {
+    const quantityNumber = Number(quantity);
+    const productIndex = cart.findIndex((product) => product.id === id);
     if (productIndex >= 0) {
       const newCart = [...cart];
-      newCart[productIndex].quantity += quantity;
+      newCart[productIndex].quantity += quantityNumber;
       setCart(newCart);
     } else {
-      setCart([...cart, { name, quantity, image }]);
+      setCart([...cart, { id, name, quantity: quantityNumber, image }]);
     }
   };
 

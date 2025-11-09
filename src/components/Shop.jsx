@@ -1,5 +1,6 @@
 import { useOutletContext } from "react-router";
-import useProducts from "./Data";
+import useProducts from "./Data.jsx";
+import ShopItem from "./ShopItem.jsx";
 
 const Shop = () => {
   const { products, error, loading } = useProducts("browse/new-releases", 50);
@@ -17,23 +18,12 @@ const Shop = () => {
             const productName = `${product.artists[0].name} - ${product.name}`;
             const image = product.images[0].url;
             return (
-              <li key={product.id}>
-                <img src={image} alt={`album artwork for ${productName}`} />
-                <p>{productName}</p>
-                <label htmlFor="quantity">Quantity</label>
-                <input
-                  type="number"
-                  id={`${product.id}-quantity`}
-                  defaultValue={1}
-                ></input>
-                <button
-                  onClick={() =>
-                    addProductToCart(product.id, productName, 1, image)
-                  }
-                >
-                  Add to cart
-                </button>
-              </li>
+              <ShopItem
+                key={product.id}
+                id={product.id}
+                name={productName}
+                image={image}
+              />
             );
           })}
         </ul>
