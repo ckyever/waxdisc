@@ -1,6 +1,8 @@
+import styles from "../styles/Preview.module.css";
+
 function Preview({ title, products }) {
   return (
-    <>
+    <div className={styles.preview}>
       <h3>{title}</h3>
       <div>
         {products && products.length > 0 ? (
@@ -21,7 +23,7 @@ function Preview({ title, products }) {
           <p>Products are unavailable</p>
         )}
       </div>
-    </>
+    </div>
   );
 }
 
