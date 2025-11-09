@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Preview component > Render empty preview 1`] = `
+<div>
+  <h3 />
+  <div>
+    <p>
+      Products are unavailable
+    </p>
+  </div>
+</div>
+`;

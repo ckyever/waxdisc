@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home component > Home page renders 1`] = `
+<div>
+  <p>
+    Loading...
+  </p>
+</div>
+`;

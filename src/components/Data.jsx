@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-const spotifyClientId = "redacted";
-const spotifyClientSecret = "redacted";
+const spotifyClientId = "70a9a1201abc47e286e590a11eb013d9";
+const spotifyClientSecret = "393d89ce662749d59d59911b8e3a3690";
 
-const useProducts = () => {
+const useProducts = (endpoint, limit) => {
   const [spotifyAccessToken, setSpotifyAccessToken] = useState(null);
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
@@ -33,7 +33,7 @@ const useProducts = () => {
   // Then fetch our products (albums)
   useEffect(() => {
     if (!spotifyAccessToken) return;
-    fetch(`https://api.spotify.com/v1/browse/new-releases?limit=50`, {
+    fetch(`https://api.spotify.com/v1/${endpoint}?limit=${limit}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${spotifyAccessToken}`,
@@ -50,7 +50,7 @@ const useProducts = () => {
       })
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
-  }, [spotifyAccessToken]);
+  }, [spotifyAccessToken, endpoint, limit]);
 
   return { products, error, loading };
 };

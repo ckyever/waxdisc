@@ -39,7 +39,7 @@ exports[`App component > Render home page 1`] = `
       </nav>
     </header>
     <p>
-      This is the home page
+      Loading...
     </p>
   </div>
 </div>
@@ -129,7 +129,7 @@ exports[`App component > Visit home page 1`] = `
       </nav>
     </header>
     <p>
-      This is the home page
+      Loading...
     </p>
   </div>
 </div>

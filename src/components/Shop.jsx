@@ -1,8 +1,7 @@
-import { Link } from "react-router";
 import useProducts from "./Data";
 
 const Shop = () => {
-  const { products, error, loading } = useProducts();
+  const { products, error, loading } = useProducts("browse/new-releases", 50);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error has occurred</p>;
