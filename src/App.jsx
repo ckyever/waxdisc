@@ -1,7 +1,21 @@
 import "./App.css";
 import { Link, Outlet } from "react-router";
+import { useState } from "react";
 
 const App = () => {
+  const [cart, setCart] = useState([]);
+  const addProductToCart = (name, quantity, image) => {
+    const productIndex = cart.findIndex((product) => product.name === name);
+    console.log(productIndex);
+    if (productIndex >= 0) {
+      const newCart = [...cart];
+      newCart[productIndex].quantity += quantity;
+      setCart(newCart);
+    } else {
+      setCart([...cart, { name, quantity, image }]);
+    }
+  };
+
   return (
     <div className="app">
       <header>
@@ -19,8 +33,9 @@ const App = () => {
             </li>
           </ul>
         </nav>
+        <button onClick={() => console.log(cart)}>Test cart</button>
       </header>
-      <Outlet />
+      <Outlet context={{ addProductToCart }} />
     </div>
   );
 };

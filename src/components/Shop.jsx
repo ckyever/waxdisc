@@ -1,7 +1,9 @@
+import { useOutletContext } from "react-router";
 import useProducts from "./Data";
 
 const Shop = () => {
   const { products, error, loading } = useProducts("browse/new-releases", 50);
+  const { addProductToCart } = useOutletContext();
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error has occurred</p>;
@@ -13,12 +15,10 @@ const Shop = () => {
         <ul>
           {products.items.map((product) => {
             const productName = `${product.artists[0].name} - ${product.name}`;
+            const image = product.images[0].url;
             return (
               <li key={product.id}>
-                <img
-                  src={product.images[0].url}
-                  alt={`album artwork for ${productName}`}
-                />
+                <img src={image} alt={`album artwork for ${productName}`} />
                 <p>{productName}</p>
                 <label htmlFor="quantity">Quantity</label>
                 <input
@@ -26,7 +26,9 @@ const Shop = () => {
                   id={`${product.id}-quantity`}
                   defaultValue={1}
                 ></input>
-                <button>Add to cart</button>
+                <button onClick={() => addProductToCart(productName, 1, image)}>
+                  Add to cart
+                </button>
               </li>
             );
           })}
