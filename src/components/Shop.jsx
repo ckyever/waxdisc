@@ -26,7 +26,11 @@ const Shop = () => {
                   id={`${product.id}-quantity`}
                   defaultValue={1}
                 ></input>
-                <button onClick={() => addProductToCart(productName, 1, image)}>
+                <button
+                  onClick={() =>
+                    addProductToCart(product.id, productName, 1, image)
+                  }
+                >
                   Add to cart
                 </button>
               </li>
