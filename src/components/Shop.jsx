@@ -20,6 +20,13 @@ const Shop = () => {
                   alt={`album artwork for ${productName}`}
                 />
                 <p>{productName}</p>
+                <label forHtml="quantity">Quantity</label>
+                <input
+                  type="number"
+                  id={`${product.id}-quantity`}
+                  defaultValue={1}
+                ></input>
+                <button>Add to cart</button>
               </li>
             );
           })}
