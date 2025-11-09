@@ -20,7 +20,7 @@ const Shop = () => {
                   alt={`album artwork for ${productName}`}
                 />
                 <p>{productName}</p>
-                <label forHtml="quantity">Quantity</label>
+                <label htmlFor="quantity">Quantity</label>
                 <input
                   type="number"
                   id={`${product.id}-quantity`}
