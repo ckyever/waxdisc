@@ -75,3 +75,13 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+/* End of CSS Reset */
+
+:root {
+  --accent-colour: #fe6c6c;
+  --light-background-colour: #ffffff;
+  --dark-background-colour: #222222;
+  --light-text-colour: #222222;
+  --dark-text-colour: #ffffff;
+}

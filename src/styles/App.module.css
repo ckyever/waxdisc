@@ -1,0 +1,36 @@
+.header {
+  background-color: var(--accent-colour);
+  color: var(--light-text-colour);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2.4rem;
+  margin: 20px;
+}
+
+.navbar {
+  background-color: var(--dark-background-colour);
+  color: var(--dark-text-colour);
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.navbar a {
+  color: var(--dark-text-colour);
+}

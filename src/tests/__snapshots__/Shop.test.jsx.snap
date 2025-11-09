@@ -2,14 +2,16 @@
 
 exports[`Shop component > Render shop page 1`] = `
 <div>
-  <div
-    class="app"
-  >
-    <header>
+  <div>
+    <header
+      class="_header_812fc8"
+    >
       <h1>
         WAXDISC
       </h1>
-      <nav>
+      <nav
+        class="_navbar_812fc8"
+      >
         <ul>
           <li>
             <a
