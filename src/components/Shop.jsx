@@ -1,5 +1,6 @@
 import useProducts from "./Data.jsx";
 import ShopItem from "./ShopItem.jsx";
+import styles from "../styles/Shop.module.css";
 
 const Shop = () => {
   const { products, error, loading } = useProducts("browse/new-releases", 50);
@@ -9,9 +10,9 @@ const Shop = () => {
 
   return (
     <>
-      <section>
+      <section className={styles.shop}>
         <h2>Products</h2>
-        <ul>
+        <ul className={styles.products}>
           {products.items.map((product) => {
             const productName = `${product.artists[0].name} - ${product.name}`;
             const image = product.images[0].url;
