@@ -85,4 +85,5 @@ h6 {
   --light-text-colour: #222222;
   --dark-text-colour: #ffffff;
   --light-label-colour: #444444;
+  --album-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }

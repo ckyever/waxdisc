@@ -6,6 +6,10 @@
   height: 100%;
 }
 
+.shopItem img {
+  box-shadow: var(--album-shadow);
+}
+
 .albumName {
   font-size: 1.1rem;
   font-weight: 600;
