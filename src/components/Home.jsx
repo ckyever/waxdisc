@@ -53,25 +53,25 @@ function Home() {
       ) : (
         <>
           <div className={styles.previewContainer}>
-            <Link to="shop/new-releases">
+            <Link to="shop/new-releases" className={styles.previewLink}>
               <h3>New Releases</h3>
             </Link>
             <Preview products={newReleaseProducts} />
           </div>
           <div className={styles.previewContainer}>
-            <Link to="shop/best-sellers">
+            <Link to="shop/best-sellers" className={styles.previewLink}>
               <h3>Best Sellers</h3>
             </Link>
             <Preview products={bestSellersProducts} />
           </div>
           <div className={styles.previewContainer}>
-            <Link to="shop/popular">
+            <Link to="shop/popular" className={styles.previewLink}>
               <h3>Popular</h3>
             </Link>
             <Preview products={popularProducts} />
           </div>
           <div className={styles.previewContainer}>
-            <Link to="shop/staff-picks">
+            <Link to="shop/staff-picks" className={styles.previewLink}>
               <h3>Staff Picks</h3>
             </Link>
             <Preview products={staffPicksProducts} />

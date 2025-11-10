@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useOutletContext } from "react-router";
+import { useOutletContext, Link } from "react-router";
 import styles from "../styles/ShopItem.module.css";
 
 const ShopItem = ({
@@ -47,9 +47,11 @@ const ShopItem = ({
 
   return (
     <li className={styles.shopItem}>
-      <img src={image} alt={`album artwork for "${album}" by ${artist}`} />
-      <p className={styles.albumName}>{album}</p>
-      <p className={styles.artistName}>{artist}</p>
+      <Link to={`/product/${id}`}>
+        <img src={image} alt={`album artwork for "${album}" by ${artist}`} />
+        <p className={styles.albumName}>{album}</p>
+        <p className={styles.artistName}>{artist}</p>
+      </Link>
       <p className={styles.price}>{price}</p>
       <form
         onSubmit={(event) =>

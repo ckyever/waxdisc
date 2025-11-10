@@ -1,4 +1,5 @@
 import styles from "../styles/Preview.module.css";
+import { Link } from "react-router";
 
 function Preview({ products }) {
   return (
@@ -10,10 +11,12 @@ function Preview({ products }) {
               const productName = `${product.artist} - ${product.album}`;
               return (
                 <li key={product.id}>
-                  <img
-                    src={product.image}
-                    alt={`album artwork for ${productName}`}
-                  />
+                  <Link to={`product/${product.id}`}>
+                    <img
+                      src={product.image}
+                      alt={`album artwork for ${productName}`}
+                    />
+                  </Link>
                 </li>
               );
             })}

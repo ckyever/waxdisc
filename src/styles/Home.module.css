@@ -33,7 +33,7 @@
   min-height: 150px;
 }
 
-.previewContainer a {
+.previewLink {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -24,7 +24,7 @@ exports[`Shop component > Render shop page 1`] = `
           <li>
             <a
               data-discover="true"
-              href="/shop"
+              href="/shop/new-releases"
             >
               Shop
             </a>
