@@ -46,14 +46,28 @@ const useNewReleases = (endpoint, limit) => {
         return response.json();
       })
       .then((data) => {
-        const products = data.albums.items.map((album) => {
-          return {
-            id: album.id,
-            image: album.images[0].url,
-            album: album.name,
-            artist: album.artists[0].name,
-          };
-        });
+        let products;
+        if (endpoint.includes("new-releases")) {
+          products = data.albums.items.map((album) => {
+            return {
+              id: album.id,
+              image: album.images[0].url,
+              album: album.name,
+              artist: album.artists[0].name,
+            };
+          });
+        } else if (endpoint.includes("playlists")) {
+          products = data.tracks.items.slice(0, limit).map((item) => {
+            return {
+              id: item.track.album.id,
+              image: item.track.album.images[0].url,
+              album: item.track.album.name,
+              artist: item.track.album.artists[0].name,
+            };
+          });
+        } else {
+          throw new Error("An error occurred");
+        }
         setProducts(products);
       })
       .catch((error) => setError(error))
