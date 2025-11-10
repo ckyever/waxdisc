@@ -15,6 +15,7 @@ const Cart = () => {
               album={product.album}
               artist={product.artist}
               image={product.image}
+              price={product.price}
               initialQuantity={product.quantity}
               cartView={true}
             />

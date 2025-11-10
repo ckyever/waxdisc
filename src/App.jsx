@@ -7,7 +7,6 @@ const App = () => {
 
   const addProductToCart = (id, album, artist, price, quantity, image) => {
     const quantityNumber = Number(quantity);
-    const priceNumber = Number(price);
     const productIndex = cart.findIndex((product) => product.id === id);
     if (productIndex >= 0) {
       const newCart = [...cart];
@@ -16,7 +15,7 @@ const App = () => {
     } else {
       setCart([
         ...cart,
-        { id, album, artist, priceNumber, quantity: quantityNumber, image },
+        { id, album, artist, price, quantity: quantityNumber, image },
       ]);
     }
   };
