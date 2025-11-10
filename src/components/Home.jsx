@@ -2,6 +2,7 @@ import Preview from "./Preview.jsx";
 import { useProducts } from "./Data";
 import styles from "../styles/Home.module.css";
 import { ENDPOINT } from "../libs/constants.jsx";
+import { Link } from "react-router";
 
 function Home() {
   const {
@@ -41,19 +42,27 @@ function Home() {
   return (
     <div className={styles.home}>
       <div className={styles.previewContainer}>
-        <h3>New Releases</h3>
+        <Link to="shop/new-releases">
+          <h3>New Releases</h3>
+        </Link>
         <Preview products={newReleaseProducts} />
       </div>
       <div className={styles.previewContainer}>
-        <h3>Best Sellers</h3>
+        <Link to="shop/best-sellers">
+          <h3>Best Sellers</h3>
+        </Link>
         <Preview products={bestSellersProducts} />
       </div>
       <div className={styles.previewContainer}>
-        <h3>Popular</h3>
+        <Link to="shop/popular">
+          <h3>Popular</h3>
+        </Link>
         <Preview products={popularProducts} />
       </div>
       <div className={styles.previewContainer}>
-        <h3>Staff Picks</h3>
+        <Link to="shop/staff-picks">
+          <h3>Staff Picks</h3>
+        </Link>
         <Preview products={staffPicksProducts} />
       </div>
     </div>
