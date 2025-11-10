@@ -1,9 +1,8 @@
 import styles from "../styles/Preview.module.css";
 
-function Preview({ title, products }) {
+function Preview({ products }) {
   return (
     <div className={styles.preview}>
-      <h3>{title}</h3>
       <div>
         {products && products.length > 0 ? (
           <ul>

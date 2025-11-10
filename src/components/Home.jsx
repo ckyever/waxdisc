@@ -1,5 +1,6 @@
 import Preview from "./Preview.jsx";
 import { useProducts } from "./Data";
+import styles from "../styles/Home.module.css";
 
 function Home() {
   const {
@@ -37,11 +38,23 @@ function Home() {
     return <p>A network error has occurred</p>;
 
   return (
-    <div>
-      <Preview title="New Releases" products={newReleaseProducts} />
-      <Preview title="Best Sellers" products={bestSellersProducts} />
-      <Preview title="Popular" products={popularProducts} />
-      <Preview title="Staff Picks" products={staffPicksProducts} />
+    <div className={styles.home}>
+      <div className={styles.previewContainer}>
+        <h3>New Releases</h3>
+        <Preview products={newReleaseProducts} />
+      </div>
+      <div className={styles.previewContainer}>
+        <h3>Best Sellers</h3>
+        <Preview products={bestSellersProducts} />
+      </div>
+      <div className={styles.previewContainer}>
+        <h3>Popular</h3>
+        <Preview products={popularProducts} />
+      </div>
+      <div className={styles.previewContainer}>
+        <h3>Staff Picks</h3>
+        <Preview products={staffPicksProducts} />
+      </div>
     </div>
   );
 }

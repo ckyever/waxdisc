@@ -53,14 +53,16 @@ const App = () => {
           </ul>
         </nav>
       </header>
-      <Outlet
-        context={{
-          cart,
-          addProductToCart,
-          deleteProductFromCart,
-          updateQuantityOfProductFromCart,
-        }}
-      />
+      <div className={styles.content}>
+        <Outlet
+          context={{
+            cart,
+            addProductToCart,
+            deleteProductFromCart,
+            updateQuantityOfProductFromCart,
+          }}
+        />
+      </div>
     </div>
   );
 };

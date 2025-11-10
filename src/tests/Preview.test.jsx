@@ -8,13 +8,6 @@ describe("Preview component", () => {
     expect(container).toMatchSnapshot();
   });
 
-  test("Display title in preview", () => {
-    const title = "Trending";
-    render(<Preview title={title} />);
-    const heading = screen.getByRole("heading", { name: title });
-    expect(heading).toBeInTheDocument();
-  });
-
   test("Display products in the preview", () => {
     const products = [
       {

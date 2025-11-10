@@ -5,7 +5,6 @@ exports[`Preview component > Render empty preview 1`] = `
   <div
     class="_preview_aa77d8"
   >
-    <h3 />
     <div>
       <p>
         Products are unavailable
