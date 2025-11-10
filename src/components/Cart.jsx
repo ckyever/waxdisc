@@ -1,13 +1,15 @@
 import { useOutletContext } from "react-router";
 import ShopItem from "./ShopItem.jsx";
+import styles from "../styles/Cart.module.css";
 
 const Cart = () => {
   const { cart } = useOutletContext();
 
   return (
-    <div>
+    <div className={styles.cartContainer}>
+      <h2>Your Cart</h2>
       {cart.length > 0 ? (
-        <ul>
+        <ul className={styles.cart}>
           {cart.map((product) => (
             <ShopItem
               key={product.id}

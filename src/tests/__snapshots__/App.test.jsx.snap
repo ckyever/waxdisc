@@ -87,7 +87,12 @@ exports[`App component > Visit cart page 1`] = `
         </ul>
       </nav>
     </header>
-    <div>
+    <div
+      class="_cartContainer_7e8544"
+    >
+      <h2>
+        Your Cart
+      </h2>
       <p>
         Your cart is empty
       </p>
