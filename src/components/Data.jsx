@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const spotifyClientId = "redacted";
 const spotifyClientSecret = "redacted";
 
-const useProducts = (endpoint, limit) => {
+const useProducts = (endpoint, limit = 1) => {
   const [spotifyAccessToken, setSpotifyAccessToken] = useState(null);
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
@@ -60,11 +60,22 @@ const useProducts = (endpoint, limit) => {
           products = data.tracks.items.slice(0, limit).map((item) => {
             return {
               id: item.track.album.id,
-              image: item.track.album.images[0].url,
+              image: item.track.album.images[1].url,
               album: item.track.album.name,
               artist: item.track.album.artists[0].name,
             };
           });
+        } else if (endpoint.includes("albums")) {
+          products = [
+            {
+              id: data.id,
+              image: data.images[0].url,
+              album: data.name,
+              artist: data.artists[0].name,
+              label: data.label,
+              releaseDate: data.release_date,
+            },
+          ];
         } else {
           throw new Error("An error occurred");
         }

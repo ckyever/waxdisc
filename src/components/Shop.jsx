@@ -9,9 +9,6 @@ const Shop = ({ endpoint }) => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error has occurred</p>;
 
-  const minimumPrice = 20;
-  const maximumPrice = 41;
-
   return (
     <>
       <section className={styles.shop}>
@@ -19,11 +16,7 @@ const Shop = ({ endpoint }) => {
         <ul className={styles.products}>
           {products.map((product) => {
             // Using a seed ensures the price remains the same on refresh
-            const price = getRandomPriceFromSeed(
-              product.id,
-              minimumPrice,
-              maximumPrice
-            );
+            const price = getRandomPriceFromSeed(product.id);
             const image = product.image;
             return (
               <ShopItem

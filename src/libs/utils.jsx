@@ -11,7 +11,7 @@ function getRandomIntegerFromSeed(seed, min, max) {
   return Math.floor(randomiser * (max - min + 1)) + min;
 }
 
-function getRandomPriceFromSeed(seed, minimumPrice, maximumPrice) {
+function getRandomPriceFromSeed(seed, minimumPrice = 20, maximumPrice = 41) {
   const price = getRandomIntegerFromSeed(
     parseInt(seed) * 1000,
     minimumPrice,
@@ -27,4 +27,14 @@ function getRandomPriceFromSeed(seed, minimumPrice, maximumPrice) {
   return formattedPrice;
 }
 
-export { getRandomPriceFromSeed };
+function isoDateToString(isoDate) {
+  const date = new Date(isoDate);
+
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
+export { getRandomPriceFromSeed, isoDateToString };
