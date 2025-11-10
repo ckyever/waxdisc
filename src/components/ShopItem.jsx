@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useOutletContext } from "react-router";
+import styles from "../styles/ShopItem.module.css";
 
 const ShopItem = ({
   id,
@@ -45,11 +46,11 @@ const ShopItem = ({
   };
 
   return (
-    <li>
+    <li className={styles.shopItem}>
       <img src={image} alt={`album artwork for "${album}" by ${artist}`} />
-      <p>{album}</p>
-      <p>{artist}</p>
-      <p>{price}</p>
+      <p className={styles.albumName}>{album}</p>
+      <p className={styles.artistName}>{artist}</p>
+      <p className={styles.price}>{price}</p>
       <form
         onSubmit={(event) =>
           handleAddToCart(event, id, album, artist, price, quantity, image)

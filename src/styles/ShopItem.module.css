@@ -1,0 +1,18 @@
+.shopItem {
+  list-style: none;
+}
+
+.albumName {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.artistName {
+  color: var(--light-label-colour);
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
