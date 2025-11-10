@@ -1,5 +1,9 @@
 .shopItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   list-style: none;
+  height: 100%;
 }
 
 .albumName {
@@ -15,4 +19,15 @@
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.5px;
+}
+
+.shopItem form {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.shopItem input {
+  width: 40px;
+  text-align: center;
 }
