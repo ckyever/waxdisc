@@ -1,31 +1,32 @@
 import Preview from "./Preview.jsx";
 import { useProducts } from "./Data";
 import styles from "../styles/Home.module.css";
+import { ENDPOINT } from "../libs/constants.jsx";
 
 function Home() {
   const {
     products: newReleaseProducts,
     error: newReleaseError,
     loading: newReleaseLoading,
-  } = useProducts("browse/new-releases", 5);
+  } = useProducts(ENDPOINT.NEW_RELEASES, 5);
 
   const {
     products: bestSellersProducts,
     error: bestSellersError,
     loading: bestSellersLoading,
-  } = useProducts("playlists/4KmcBdDIbHeO0alvCfk2TC", 5);
+  } = useProducts(ENDPOINT.BEST_SELLERS, 5);
 
   const {
     products: popularProducts,
     error: popularError,
     loading: popularLoading,
-  } = useProducts("playlists/2gTOS5ytCNAtI5qQVQsQ2m", 5);
+  } = useProducts(ENDPOINT.POPULAR, 5);
 
   const {
     products: staffPicksProducts,
     error: staffPicksError,
     loading: staffPicksLoading,
-  } = useProducts("playlists/4ZDx7GeyVgQxknO6f63t8m", 5);
+  } = useProducts(ENDPOINT.STAFF_PICKS, 5);
 
   if (
     newReleaseLoading &&

@@ -40,9 +40,13 @@ exports[`Shop component > Render shop page 1`] = `
         </ul>
       </nav>
     </header>
-    <p>
-      Loading...
-    </p>
+    <div
+      class="_content_812fc8"
+    >
+      <p>
+        Loading...
+      </p>
+    </div>
   </div>
 </div>
 `;

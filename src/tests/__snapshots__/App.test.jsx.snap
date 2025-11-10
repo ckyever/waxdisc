@@ -40,9 +40,13 @@ exports[`App component > Render home page 1`] = `
         </ul>
       </nav>
     </header>
-    <p>
-      Loading...
-    </p>
+    <div
+      class="_content_812fc8"
+    >
+      <p>
+        Loading...
+      </p>
+    </div>
   </div>
 </div>
 `;
@@ -88,14 +92,18 @@ exports[`App component > Visit cart page 1`] = `
       </nav>
     </header>
     <div
-      class="_cartContainer_7e8544"
+      class="_content_812fc8"
     >
-      <h2>
-        Your Cart
-      </h2>
-      <p>
-        Your cart is empty
-      </p>
+      <div
+        class="_cartContainer_7e8544"
+      >
+        <h2>
+          Your Cart
+        </h2>
+        <p>
+          Your cart is empty
+        </p>
+      </div>
     </div>
   </div>
 </div>
@@ -141,9 +149,13 @@ exports[`App component > Visit home page 1`] = `
         </ul>
       </nav>
     </header>
-    <p>
-      Loading...
-    </p>
+    <div
+      class="_content_812fc8"
+    >
+      <p>
+        Loading...
+      </p>
+    </div>
   </div>
 </div>
 `;
@@ -196,9 +208,13 @@ exports[`App component > Visit shop page 1`] = `
         </ul>
       </nav>
     </header>
-    <p>
-      Loading...
-    </p>
+    <div
+      class="_content_812fc8"
+    >
+      <p>
+        Loading...
+      </p>
+    </div>
   </div>
 </div>
 `;
