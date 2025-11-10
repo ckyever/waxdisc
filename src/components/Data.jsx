@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const spotifyClientId = "redacted";
 const spotifyClientSecret = "redacted";
 
-const useNewReleases = (endpoint, limit) => {
+const useProducts = (endpoint, limit) => {
   const [spotifyAccessToken, setSpotifyAccessToken] = useState(null);
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
@@ -77,4 +77,4 @@ const useNewReleases = (endpoint, limit) => {
   return { products, error, loading };
 };
 
-export { useNewReleases };
+export { useProducts };
