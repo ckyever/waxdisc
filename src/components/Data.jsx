@@ -46,7 +46,15 @@ const useNewReleases = (endpoint, limit) => {
         return response.json();
       })
       .then((data) => {
-        setProducts(data.albums);
+        const products = data.albums.items.map((album) => {
+          return {
+            id: album.id,
+            image: album.images[0].url,
+            album: album.name,
+            artist: album.artists[0].name,
+          };
+        });
+        setProducts(products);
       })
       .catch((error) => setError(error))
       .finally(() => setLoading(false));

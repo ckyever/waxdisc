@@ -8,11 +8,11 @@ function Preview({ title, products }) {
         {products && products.length > 0 ? (
           <ul>
             {products.map((product) => {
-              const productName = `${product.artists[0].name} - ${product.name}`;
+              const productName = `${product.artist} - ${product.album}`;
               return (
                 <li key={product.id}>
                   <img
-                    src={product.images[0].url}
+                    src={product.image}
                     alt={`album artwork for ${productName}`}
                   />
                 </li>

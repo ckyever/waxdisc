@@ -20,20 +20,20 @@ const Shop = () => {
       <section className={styles.shop}>
         <h2>Products</h2>
         <ul className={styles.products}>
-          {products.items.map((product) => {
+          {products.map((product) => {
             // Using a seed ensures the price remains the same on refresh
             const price = getRandomPriceFromSeed(
               product.id,
               minimumPrice,
               maximumPrice
             );
-            const image = product.images[0].url;
+            const image = product.image;
             return (
               <ShopItem
                 key={product.id}
                 id={product.id}
-                album={product.name}
-                artist={product.artists[0].name}
+                album={product.album}
+                artist={product.artist}
                 image={image}
                 price={price}
                 cartView={false}

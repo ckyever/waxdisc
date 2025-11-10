@@ -13,7 +13,7 @@ function Home() {
 
   return (
     <div>
-      <Preview title="New Releases" products={newReleaseProducts.items} />
+      <Preview title="New Releases" products={newReleaseProducts} />
     </div>
   );
 }
