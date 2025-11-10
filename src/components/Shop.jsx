@@ -14,13 +14,13 @@ const Shop = () => {
         <h2>Products</h2>
         <ul className={styles.products}>
           {products.items.map((product) => {
-            const productName = `${product.artists[0].name} - ${product.name}`;
             const image = product.images[0].url;
             return (
               <ShopItem
                 key={product.id}
                 id={product.id}
-                name={productName}
+                album={product.name}
+                artist={product.artists[0].name}
                 image={image}
                 cartView={false}
               />

@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { useOutletContext } from "react-router";
 
-const ShopItem = ({ id, name, image, initialQuantity = 1, cartView }) => {
+const ShopItem = ({
+  id,
+  album,
+  artist,
+  image,
+  initialQuantity = 1,
+  cartView,
+}) => {
   const [quantity, setQuantity] = useState(initialQuantity);
   const {
     addProductToCart,
@@ -9,9 +16,9 @@ const ShopItem = ({ id, name, image, initialQuantity = 1, cartView }) => {
     updateQuantityOfProductFromCart,
   } = useOutletContext();
 
-  const handleAddToCart = (event, id, name, quantity, image) => {
+  const handleAddToCart = (event, id, album, artist, quantity, image) => {
     event.preventDefault();
-    addProductToCart(id, name, quantity, image);
+    addProductToCart(id, album, artist, quantity, image);
   };
 
   const handleQuantityUpdate = (event) => {
@@ -30,10 +37,13 @@ const ShopItem = ({ id, name, image, initialQuantity = 1, cartView }) => {
 
   return (
     <li>
-      <img src={image} alt={`album artwork for ${name}`} />
-      <p>{name}</p>
+      <img src={image} alt={`album artwork for "${album}" by ${artist}`} />
+      <p>{album}</p>
+      <p>{artist}</p>
       <form
-        onSubmit={(event) => handleAddToCart(event, id, name, quantity, image)}
+        onSubmit={(event) =>
+          handleAddToCart(event, id, album, artist, quantity, image)
+        }
       >
         <label htmlFor={`${id}-quantity`}>Quantity</label>
         <input

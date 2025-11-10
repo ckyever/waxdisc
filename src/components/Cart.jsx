@@ -12,7 +12,8 @@ const Cart = () => {
             <ShopItem
               key={product.id}
               id={product.id}
-              name={product.name}
+              album={product.album}
+              artist={product.artist}
               image={product.image}
               initialQuantity={product.quantity}
               cartView={true}

@@ -5,7 +5,7 @@ import styles from "./styles/App.module.css";
 const App = () => {
   const [cart, setCart] = useState([]);
 
-  const addProductToCart = (id, name, quantity, image) => {
+  const addProductToCart = (id, album, artist, quantity, image) => {
     const quantityNumber = Number(quantity);
     const productIndex = cart.findIndex((product) => product.id === id);
     if (productIndex >= 0) {
@@ -13,7 +13,10 @@ const App = () => {
       newCart[productIndex].quantity += quantityNumber;
       setCart(newCart);
     } else {
-      setCart([...cart, { id, name, quantity: quantityNumber, image }]);
+      setCart([
+        ...cart,
+        { id, album, artist, quantity: quantityNumber, image },
+      ]);
     }
   };
 
