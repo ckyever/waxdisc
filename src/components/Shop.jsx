@@ -3,8 +3,8 @@ import ShopItem from "./ShopItem.jsx";
 import styles from "../styles/Shop.module.css";
 import { getRandomPriceFromSeed } from "../libs/utils.jsx";
 
-const Shop = () => {
-  const { products, error, loading } = useProducts("browse/new-releases", 50);
+const Shop = ({ endpoint }) => {
+  const { products, error, loading } = useProducts(endpoint, 50);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error has occurred</p>;
