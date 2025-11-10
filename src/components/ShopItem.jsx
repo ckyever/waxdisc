@@ -6,6 +6,7 @@ const ShopItem = ({
   album,
   artist,
   image,
+  price,
   initialQuantity = 1,
   cartView,
 }) => {
@@ -16,9 +17,17 @@ const ShopItem = ({
     updateQuantityOfProductFromCart,
   } = useOutletContext();
 
-  const handleAddToCart = (event, id, album, artist, quantity, image) => {
+  const handleAddToCart = (
+    event,
+    id,
+    album,
+    artist,
+    price,
+    quantity,
+    image
+  ) => {
     event.preventDefault();
-    addProductToCart(id, album, artist, quantity, image);
+    addProductToCart(id, album, artist, price, quantity, image);
   };
 
   const handleQuantityUpdate = (event) => {
@@ -40,9 +49,10 @@ const ShopItem = ({
       <img src={image} alt={`album artwork for "${album}" by ${artist}`} />
       <p>{album}</p>
       <p>{artist}</p>
+      <p>{price}</p>
       <form
         onSubmit={(event) =>
-          handleAddToCart(event, id, album, artist, quantity, image)
+          handleAddToCart(event, id, album, artist, price, quantity, image)
         }
       >
         <label htmlFor={`${id}-quantity`}>Quantity</label>
