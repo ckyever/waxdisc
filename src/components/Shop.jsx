@@ -1,10 +1,13 @@
-import useProducts from "./Data.jsx";
+import { useNewReleases } from "./Data.jsx";
 import ShopItem from "./ShopItem.jsx";
 import styles from "../styles/Shop.module.css";
 import { getRandomPriceFromSeed } from "../libs/utils.jsx";
 
 const Shop = () => {
-  const { products, error, loading } = useProducts("browse/new-releases", 50);
+  const { products, error, loading } = useNewReleases(
+    "browse/new-releases",
+    50
+  );
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error has occurred</p>;
