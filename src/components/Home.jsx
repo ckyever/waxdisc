@@ -3,6 +3,7 @@ import { useProducts } from "./Data";
 import styles from "../styles/Home.module.css";
 import { ENDPOINT } from "../libs/constants.jsx";
 import { Link } from "react-router";
+import storeImage from "../assets/store-interior.jpg";
 
 function Home() {
   const {
@@ -29,42 +30,54 @@ function Home() {
     loading: staffPicksLoading,
   } = useProducts(ENDPOINT.STAFF_PICKS, 5);
 
-  if (
-    newReleaseLoading &&
-    bestSellersLoading &&
-    popularLoading &&
-    staffPicksLoading
-  )
-    return <p>Loading...</p>;
-  if (newReleaseError && bestSellersError && popularError && staffPicksError)
-    return <p>A network error has occurred</p>;
-
   return (
     <div className={styles.home}>
-      <div className={styles.previewContainer}>
-        <Link to="shop/new-releases">
-          <h3>New Releases</h3>
-        </Link>
-        <Preview products={newReleaseProducts} />
+      <div className={styles.storeImageContainer}>
+        <img src={storeImage} alt="Interior of a vinyl store" />
+        <div className={styles.storeImageOverlay}>
+          <p>New vinyls every week</p>
+          <br />
+          <p>Open everyday: 10am - 6pm</p>
+        </div>
       </div>
-      <div className={styles.previewContainer}>
-        <Link to="shop/best-sellers">
-          <h3>Best Sellers</h3>
-        </Link>
-        <Preview products={bestSellersProducts} />
-      </div>
-      <div className={styles.previewContainer}>
-        <Link to="shop/popular">
-          <h3>Popular</h3>
-        </Link>
-        <Preview products={popularProducts} />
-      </div>
-      <div className={styles.previewContainer}>
-        <Link to="shop/staff-picks">
-          <h3>Staff Picks</h3>
-        </Link>
-        <Preview products={staffPicksProducts} />
-      </div>
+      {newReleaseLoading &&
+      bestSellersLoading &&
+      popularLoading &&
+      staffPicksLoading ? (
+        <p>Loading...</p>
+      ) : newReleaseError &&
+        bestSellersError &&
+        popularError &&
+        staffPicksError ? (
+        <p>A network error has occurred</p>
+      ) : (
+        <>
+          <div className={styles.previewContainer}>
+            <Link to="shop/new-releases">
+              <h3>New Releases</h3>
+            </Link>
+            <Preview products={newReleaseProducts} />
+          </div>
+          <div className={styles.previewContainer}>
+            <Link to="shop/best-sellers">
+              <h3>Best Sellers</h3>
+            </Link>
+            <Preview products={bestSellersProducts} />
+          </div>
+          <div className={styles.previewContainer}>
+            <Link to="shop/popular">
+              <h3>Popular</h3>
+            </Link>
+            <Preview products={popularProducts} />
+          </div>
+          <div className={styles.previewContainer}>
+            <Link to="shop/staff-picks">
+              <h3>Staff Picks</h3>
+            </Link>
+            <Preview products={staffPicksProducts} />
+          </div>
+        </>
+      )}
     </div>
   );
 }

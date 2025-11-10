@@ -5,6 +5,28 @@
   gap: 24px;
 }
 
+.storeImageContainer {
+  position: relative;
+}
+
+.storeImageOverlay {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.storeImageOverlay p {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--dark-text-colour);
+}
+
 .previewContainer {
   display: flex;
   min-width: 1000px;
