@@ -30,9 +30,9 @@ describe("Shop component", () => {
             items: [
               {
                 id: "1",
-                name: "GNX",
-                artists: [{ name: "Kendirck Lamar" }],
-                images: [{ url: "placeholder" }],
+                album: "GNX",
+                artist: "Kendirck Lamar",
+                image: "placeholder",
               },
             ],
           },
