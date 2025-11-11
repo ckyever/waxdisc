@@ -19,3 +19,8 @@
 .separator {
   width: 100%;
 }
+
+.totalPrice {
+  font-size: 2rem;
+  font-weight: 600;
+}

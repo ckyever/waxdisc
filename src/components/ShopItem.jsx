@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useOutletContext, Link } from "react-router";
 import styles from "../styles/ShopItem.module.css";
+import { formatPrice } from "../libs/utils.jsx";
 
 const ShopItem = ({
   id,
@@ -46,7 +47,7 @@ const ShopItem = ({
   };
 
   return (
-    <li className={cartView ? styles.cartItem : styles.shopItem}>
+    <li key={id} className={cartView ? styles.cartItem : styles.shopItem}>
       {cartView ? (
         <>
           <Link
@@ -77,7 +78,7 @@ const ShopItem = ({
           </Link>
         </>
       )}
-      <p className={styles.price}>{price}</p>
+      <p className={styles.price}>{formatPrice(price)}</p>
       <form
         className={styles.quantityForm}
         onSubmit={(event) =>

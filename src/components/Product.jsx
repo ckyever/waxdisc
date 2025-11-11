@@ -2,7 +2,11 @@ import { useState } from "react";
 import { useParams, useOutletContext } from "react-router";
 import { useProducts } from "./Data.jsx";
 import { ENDPOINT } from "../libs/constants.jsx";
-import { getRandomPriceFromSeed, isoDateToString } from "../libs/utils.jsx";
+import {
+  getRandomPriceFromSeed,
+  formatPrice,
+  isoDateToString,
+} from "../libs/utils.jsx";
 import styles from "../styles/Product.module.css";
 
 const Product = () => {
@@ -44,7 +48,7 @@ const Product = () => {
           <div className={styles.productText}>
             <h2 className={styles.album}>{product.album}</h2>
             <p className={styles.artist}>{product.artist}</p>
-            <p className={styles.price}>{price}</p>
+            <p className={styles.price}>{formatPrice(price)}</p>
             <form
               className={styles.quantity}
               onSubmit={(event) =>

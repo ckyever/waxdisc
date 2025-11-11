@@ -18,8 +18,10 @@ function getRandomPriceFromSeed(seed, minimumPrice = 20, maximumPrice = 41) {
     maximumPrice
   );
 
-  price = Number.isNaN(price) ? 40 : price;
+  return Number.isNaN(price) ? 40 : price;
+}
 
+function formatPrice(price) {
   const formattedPrice = new Intl.NumberFormat("en-AU", {
     style: "currency",
     currency: "AUD",
@@ -40,4 +42,4 @@ function isoDateToString(isoDate) {
   });
 }
 
-export { getRandomPriceFromSeed, isoDateToString };
+export { getRandomPriceFromSeed, formatPrice, isoDateToString };
