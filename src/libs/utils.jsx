@@ -12,11 +12,14 @@ function getRandomIntegerFromSeed(seed, min, max) {
 }
 
 function getRandomPriceFromSeed(seed, minimumPrice = 20, maximumPrice = 41) {
-  const price = getRandomIntegerFromSeed(
+  let price = getRandomIntegerFromSeed(
     parseInt(seed) * 1000,
     minimumPrice,
     maximumPrice
   );
+
+  price = Number.isNaN(price) ? 40 : price;
+
   const formattedPrice = new Intl.NumberFormat("en-AU", {
     style: "currency",
     currency: "AUD",
