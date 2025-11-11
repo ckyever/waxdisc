@@ -7,20 +7,23 @@ const Cart = () => {
 
   return (
     <div className={styles.cartContainer}>
-      <h2>Your Cart</h2>
+      <h2 className={styles.title}>Your Cart</h2>
       {cart.length > 0 ? (
         <ul className={styles.cart}>
           {cart.map((product) => (
-            <ShopItem
-              key={product.id}
-              id={product.id}
-              album={product.album}
-              artist={product.artist}
-              image={product.image}
-              price={product.price}
-              initialQuantity={product.quantity}
-              cartView={true}
-            />
+            <>
+              <ShopItem
+                key={product.id}
+                id={product.id}
+                album={product.album}
+                artist={product.artist}
+                image={product.image}
+                price={product.price}
+                initialQuantity={product.quantity}
+                cartView={true}
+              />
+              <hr className={styles.separator} />
+            </>
           ))}
         </ul>
       ) : (

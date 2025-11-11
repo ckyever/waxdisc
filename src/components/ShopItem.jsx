@@ -46,20 +46,47 @@ const ShopItem = ({
   };
 
   return (
-    <li className={styles.shopItem}>
-      <Link to={`/product/${id}`}>
-        <img src={image} alt={`album artwork for "${album}" by ${artist}`} />
-        <p className={styles.albumName}>{album}</p>
-        <p className={styles.artistName}>{artist}</p>
-      </Link>
+    <li className={cartView ? styles.cartItem : styles.shopItem}>
+      {cartView ? (
+        <>
+          <Link
+            className={`${styles.productLink} ${styles.imageContainer}`}
+            to={`/product/${id}`}
+          >
+            <img
+              className={styles.productImage}
+              src={image}
+              alt={`album artwork for "${album}" by ${artist}`}
+            />
+          </Link>
+          <Link className={styles.productLink} to={`/product/${id}`}>
+            <p className={styles.albumName}>{album}</p>
+            <p className={styles.artistName}>{artist}</p>
+          </Link>
+        </>
+      ) : (
+        <>
+          <Link className={styles.productLink} to={`/product/${id}`}>
+            <img
+              className={styles.productImage}
+              src={image}
+              alt={`album artwork for "${album}" by ${artist}`}
+            />
+            <p className={styles.albumName}>{album}</p>
+            <p className={styles.artistName}>{artist}</p>
+          </Link>
+        </>
+      )}
       <p className={styles.price}>{price}</p>
       <form
+        className={styles.quantityForm}
         onSubmit={(event) =>
           handleAddToCart(event, id, album, artist, price, quantity, image)
         }
       >
         <label htmlFor={`${id}-quantity`}>Quantity</label>
         <input
+          className={styles.quantityField}
           type="number"
           min={1}
           id={`${id}-quantity`}
