@@ -1,20 +1,37 @@
+import { useState, useEffect } from "react";
 import { useProducts } from "./Data.jsx";
 import ShopItem from "./ShopItem.jsx";
 import styles from "../styles/Shop.module.css";
 import { getRandomPriceFromSeed } from "../libs/utils.jsx";
 
+const RESULTS_PER_PAGE = 48;
+
 const Shop = ({ endpoint }) => {
-  const { products, error, loading } = useProducts(endpoint, 50);
+  const [indexOfNextProductToLoad, setIndexOfNextProductToLoad] = useState(0);
+  const [displayedProducts, setDisplayedProducts] = useState([]);
+  const { totalResults, products, error, loading } = useProducts(
+    endpoint,
+    RESULTS_PER_PAGE,
+    indexOfNextProductToLoad
+  );
+
+  useEffect(() => {
+    setDisplayedProducts([...displayedProducts, ...products]);
+  }, [products]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error has occurred</p>;
+
+  function loadNextProducts() {
+    setIndexOfNextProductToLoad(indexOfNextProductToLoad + RESULTS_PER_PAGE);
+  }
 
   return (
     <>
       <section className={styles.shop}>
         <h2>Products</h2>
         <ul className={styles.products}>
-          {products.map((product) => {
+          {displayedProducts.map((product) => {
             // Using a seed ensures the price remains the same on refresh
             const price = getRandomPriceFromSeed(product.id);
             const image = product.image;
@@ -31,6 +48,9 @@ const Shop = ({ endpoint }) => {
             );
           })}
         </ul>
+        {indexOfNextProductToLoad <= totalResults - RESULTS_PER_PAGE ? (
+          <button onClick={() => loadNextProducts()}>Load more...</button>
+        ) : undefined}
       </section>
     </>
   );

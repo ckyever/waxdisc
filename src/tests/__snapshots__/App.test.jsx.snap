@@ -120,7 +120,9 @@ exports[`App component > Visit cart page 1`] = `
       <div
         class="_cartContainer_7e8544"
       >
-        <h2>
+        <h2
+          class="_title_7e8544"
+        >
           Your Cart
         </h2>
         <p>

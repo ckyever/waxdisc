@@ -3,11 +3,12 @@ import { useState, useEffect } from "react";
 const spotifyClientId = "redacted";
 const spotifyClientSecret = "redacted";
 
-const useProducts = (endpoint, limit = 1) => {
+const useProducts = (endpoint, limit = 1, offset = 0) => {
   const [spotifyAccessToken, setSpotifyAccessToken] = useState(null);
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [totalResults, setTotalResults] = useState(null);
 
   // First get access token
   useEffect(() => {
@@ -33,7 +34,17 @@ const useProducts = (endpoint, limit = 1) => {
   // Then fetch our products (albums)
   useEffect(() => {
     if (!spotifyAccessToken) return;
-    fetch(`https://api.spotify.com/v1/${endpoint}?limit=${limit}`, {
+
+    let url;
+    if (endpoint.includes("new-releases") || endpoint.includes("playlists")) {
+      url = `https://api.spotify.com/v1/${endpoint}?limit=${limit}&offset=${offset}`;
+    } else if (endpoint.includes("albums")) {
+      url = `https://api.spotify.com/v1/${endpoint}`;
+    } else {
+      throw new Error("An error occurred");
+    }
+
+    fetch(url, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${spotifyAccessToken}`,
@@ -46,8 +57,10 @@ const useProducts = (endpoint, limit = 1) => {
         return response.json();
       })
       .then((data) => {
+        let totalResults;
         let products;
         if (endpoint.includes("new-releases")) {
+          totalResults = data.albums.total;
           products = data.albums.items.map((album) => {
             return {
               id: album.id,
@@ -57,7 +70,8 @@ const useProducts = (endpoint, limit = 1) => {
             };
           });
         } else if (endpoint.includes("playlists")) {
-          products = data.tracks.items.slice(0, limit).map((item) => {
+          totalResults = data.total;
+          products = data.items.map((item) => {
             return {
               id: item.track.album.id,
               image: item.track.album.images[1].url,
@@ -66,6 +80,7 @@ const useProducts = (endpoint, limit = 1) => {
             };
           });
         } else if (endpoint.includes("albums")) {
+          totalResults = 1;
           products = [
             {
               id: data.id,
@@ -85,13 +100,14 @@ const useProducts = (endpoint, limit = 1) => {
         } else {
           throw new Error("An error occurred");
         }
+        setTotalResults(totalResults);
         setProducts(products);
       })
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
-  }, [spotifyAccessToken, endpoint, limit]);
+  }, [spotifyAccessToken, endpoint, limit, offset]);
 
-  return { products, error, loading };
+  return { totalResults, products, error, loading };
 };
 
 export { useProducts };
