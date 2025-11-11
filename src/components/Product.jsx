@@ -3,6 +3,7 @@ import { useParams, useOutletContext } from "react-router";
 import { useProducts } from "./Data.jsx";
 import { ENDPOINT } from "../libs/constants.jsx";
 import { getRandomPriceFromSeed, isoDateToString } from "../libs/utils.jsx";
+import styles from "../styles/Product.module.css";
 
 const Product = () => {
   const { productId } = useParams();
@@ -32,19 +33,20 @@ const Product = () => {
   }
 
   return (
-    <div>
+    <div className={styles.content}>
       {loading ? (
         <p>Loading...</p>
       ) : error ? (
         <p>A network error has occurred</p>
       ) : (
-        <>
+        <div className={styles.product}>
           <img src={product.image}></img>
-          <div>
-            <h2>{product.album}</h2>
-            <p>{product.artist}</p>
-            <p>{price}</p>
+          <div className={styles.productText}>
+            <h2 className={styles.album}>{product.album}</h2>
+            <p className={styles.artist}>{product.artist}</p>
+            <p className={styles.price}>{price}</p>
             <form
+              className={styles.quantity}
               onSubmit={(event) =>
                 handleAddToCart(
                   event,
@@ -59,6 +61,7 @@ const Product = () => {
             >
               <label htmlFor="quantity">Quantity</label>
               <input
+                className={styles.quantityField}
                 type="number"
                 min={1}
                 id="quantity"
@@ -67,14 +70,27 @@ const Product = () => {
               ></input>
               <button type="submit">Add to cart</button>
             </form>
+            <hr className={styles.separator} />
             <p>
-              <b>Label:</b> {product.label}
+              <strong>Label:</strong> {product.label}
             </p>
             <p>
-              <b>Release Date:</b> {isoDateToString(product.releaseDate)}
+              <strong>Release Date:</strong>{" "}
+              {isoDateToString(product.releaseDate)}
             </p>
+            <div>
+              <strong>Tracklist:</strong>
+              <ol className={styles.trackList}>
+                {product.tracks.map((track) => (
+                  <li key={track.trackNumber} className={styles.track}>
+                    <span>{track.trackNumber}.</span>
+                    <span>{track.trackName}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
           </div>
-        </>
+        </div>
       )}
     </div>
   );

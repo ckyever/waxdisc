@@ -1,0 +1,66 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  font-size: 1.2rem;
+}
+
+.productText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.album {
+  font-size: 2.4rem;
+}
+
+.artist {
+  font-size: 1.6rem;
+  color: var(--light-label-colour);
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.quantity {
+  display: flex;
+  gap: 8px;
+}
+
+.quantityField {
+  width: 80px;
+}
+
+.separator {
+  margin: 24px 0;
+}
+
+.trackList {
+  list-style: none;
+  padding: 0;
+}
+
+.track {
+  display: grid;
+  grid-template-columns: 30px auto;
+  gap: 8px;
+}
+
+/* Selects the first column (track numbers) */
+.track > :nth-child(2n + 1) {
+  text-align: center;
+  font-weight: 600;
+  color: gray;
+}

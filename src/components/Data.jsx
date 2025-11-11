@@ -74,6 +74,12 @@ const useProducts = (endpoint, limit = 1) => {
               artist: data.artists[0].name,
               label: data.label,
               releaseDate: data.release_date,
+              tracks: data.tracks.items.map((track) => {
+                return {
+                  trackNumber: track.track_number,
+                  trackName: track.name,
+                };
+              }),
             },
           ];
         } else {
