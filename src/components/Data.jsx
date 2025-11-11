@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-const spotifyClientId = "70a9a1201abc47e286e590a11eb013d9";
-const spotifyClientSecret = "17c00659a5254bebbc4b163527f53f8d";
+const spotifyClientId = "redacted";
+const spotifyClientSecret = "redacted";
 
 const useProducts = (endpoint, limit = 1) => {
   const [spotifyAccessToken, setSpotifyAccessToken] = useState(null);
