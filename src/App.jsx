@@ -41,7 +41,6 @@ const App = () => {
   const cartTotal = (() => {
     let total = 0;
     cart.forEach((item) => {
-      console.log(item);
       total += item.quantity;
     });
     return total;
