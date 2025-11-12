@@ -2,7 +2,9 @@
 
 exports[`Shop component > Render shop page 1`] = `
 <div>
-  <div>
+  <div
+    class="_app_812fc8"
+  >
     <header
       class="_header_812fc8"
     >
@@ -40,13 +42,80 @@ exports[`Shop component > Render shop page 1`] = `
         </ul>
       </nav>
     </header>
-    <div
+    <main
       class="_content_812fc8"
     >
       <p>
         Loading...
       </p>
-    </div>
+    </main>
+    <footer
+      class="_footer_812fc8"
+    >
+      <div>
+        <h2>
+          WAXDISC
+        </h2>
+        <p>
+          Home to Australia's best vinyl collection
+        </p>
+      </div>
+      <ul>
+        <h4>
+          Help
+        </h4>
+        <li>
+          <a>
+            Track my order
+          </a>
+        </li>
+        <li>
+          <a>
+            Returns
+          </a>
+        </li>
+        <li>
+          <a>
+            Contact us
+          </a>
+        </li>
+        <li>
+          <a>
+            Terms and conditions
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <h4>
+          Company
+        </h4>
+        <li>
+          <a>
+            About us
+          </a>
+        </li>
+        <li>
+          <a>
+            Store location
+          </a>
+        </li>
+        <li>
+          <a>
+            Careers
+          </a>
+        </li>
+        <li>
+          <a>
+            News
+          </a>
+        </li>
+        <li>
+          <a>
+            Feedback
+          </a>
+        </li>
+      </ul>
+    </footer>
   </div>
 </div>
 `;

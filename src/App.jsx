@@ -36,7 +36,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className={styles.app}>
       <header className={styles.header}>
         <h1>WAXDISC</h1>
         <nav className={styles.navbar}>
@@ -53,7 +53,7 @@ const App = () => {
           </ul>
         </nav>
       </header>
-      <div className={styles.content}>
+      <main className={styles.content}>
         <Outlet
           context={{
             cart,
@@ -62,7 +62,46 @@ const App = () => {
             updateQuantityOfProductFromCart,
           }}
         />
-      </div>
+      </main>
+      <footer className={styles.footer}>
+        <div>
+          <h2>WAXDISC</h2>
+          <p>Home to Australia's best vinyl collection</p>
+        </div>
+        <ul>
+          <h4>Help</h4>
+          <li>
+            <a>Track my order</a>
+          </li>
+          <li>
+            <a>Returns</a>
+          </li>
+          <li>
+            <a>Contact us</a>
+          </li>
+          <li>
+            <a>Terms and conditions</a>
+          </li>
+        </ul>
+        <ul>
+          <h4>Company</h4>
+          <li>
+            <a>About us</a>
+          </li>
+          <li>
+            <a>Store location</a>
+          </li>
+          <li>
+            <a>Careers</a>
+          </li>
+          <li>
+            <a>News</a>
+          </li>
+          <li>
+            <a>Feedback</a>
+          </li>
+        </ul>
+      </footer>
     </div>
   );
 };
