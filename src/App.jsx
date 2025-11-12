@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./styles/App.module.css";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import Footer from "./components/Footer.jsx";
+import cartIcon from "./assets/cart-outline.svg";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -37,11 +38,28 @@ const App = () => {
     }
   };
 
+  const cartTotal = (() => {
+    let total = 0;
+    cart.forEach((item) => {
+      console.log(item);
+      total += item.quantity;
+    });
+    return total;
+  })();
+
   return (
     <div className={styles.app}>
       <ScrollToTop />
       <header className={styles.header}>
-        <h1>WAXDISC</h1>
+        <div className={styles.title}>
+          <h1>WAXDISC</h1>
+          <Link className={styles.cart} to="cart">
+            <span className={styles.cartCount}>
+              {cartTotal > 0 ? cartTotal : undefined}
+            </span>
+            <img src={cartIcon} alt="cart outline icon" />
+          </Link>
+        </div>
         <nav className={styles.navbar}>
           <ul>
             <li>
