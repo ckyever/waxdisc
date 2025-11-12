@@ -3,6 +3,7 @@ import { useProducts } from "./Data.jsx";
 import ShopItem from "./ShopItem.jsx";
 import styles from "../styles/Shop.module.css";
 import { getRandomPriceFromSeed } from "../libs/utils.jsx";
+import LoadingArea from "./LoadingArea.jsx";
 
 const RESULTS_PER_PAGE = 48;
 
@@ -49,7 +50,11 @@ const Shop = ({ endpoint }) => {
           })}
         </ul>
         {indexOfNextProductToLoad <= totalResults - RESULTS_PER_PAGE ? (
-          <button onClick={() => loadNextProducts()}>Load more...</button>
+          <LoadingArea
+            onVisible={() => {
+              loadNextProducts();
+            }}
+          />
         ) : undefined}
       </section>
     </>
