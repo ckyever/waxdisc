@@ -1,6 +1,7 @@
 import { useOutletContext } from "react-router";
 import ShopItem from "./ShopItem.jsx";
 import styles from "../styles/Cart.module.css";
+import { formatPrice } from "../libs/utils.jsx";
 
 const Cart = () => {
   const { cart } = useOutletContext();
@@ -31,7 +32,7 @@ const Cart = () => {
               );
             })}
           </ul>
-          <p className={styles.totalPrice}>Total: {totalPrice}</p>
+          <p className={styles.totalPrice}>Total: {formatPrice(totalPrice)}</p>
         </>
       ) : (
         <p>Your cart is empty</p>
