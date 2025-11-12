@@ -4,6 +4,7 @@ import ShopItem from "./ShopItem.jsx";
 import styles from "../styles/Shop.module.css";
 import { getRandomPriceFromSeed } from "../libs/utils.jsx";
 import LoadingArea from "./LoadingArea.jsx";
+import { Link } from "react-router";
 
 const RESULTS_PER_PAGE = 48;
 
@@ -15,6 +16,11 @@ const Shop = ({ endpoint }) => {
     RESULTS_PER_PAGE,
     indexOfNextProductToLoad
   );
+
+  useEffect(() => {
+    setIndexOfNextProductToLoad(0);
+    setDisplayedProducts([]);
+  }, [endpoint]);
 
   useEffect(() => {
     setDisplayedProducts([...displayedProducts, ...products]);
@@ -33,31 +39,57 @@ const Shop = ({ endpoint }) => {
     <>
       <section className={styles.shop}>
         <h2>Products</h2>
-        <ul className={styles.products}>
-          {displayedProducts.map((product) => {
-            // Using a seed ensures the price remains the same on refresh
-            const price = getRandomPriceFromSeed(product.id);
-            const image = product.image;
-            return (
-              <ShopItem
-                key={product.id}
-                id={product.id}
-                album={product.album}
-                artist={product.artist}
-                image={image}
-                price={price}
-                cartView={false}
+        <div className={styles.content}>
+          <ul className={styles.sidebar}>
+            <li>
+              <Link to="/shop/new-releases">
+                <p>New Releases</p>
+              </Link>
+            </li>
+            <li>
+              <Link to="/shop/best-sellers">
+                <p>Best Sellers</p>
+              </Link>
+            </li>
+            <li>
+              <Link to="/shop/popular">
+                <p>Popular</p>
+              </Link>
+            </li>
+            <li>
+              <Link to="/shop/staff-picks">
+                <p>Staff Picks</p>
+              </Link>
+            </li>
+          </ul>
+          <div>
+            <ul className={styles.products}>
+              {displayedProducts.map((product) => {
+                // Using a seed ensures the price remains the same on refresh
+                const price = getRandomPriceFromSeed(product.id);
+                const image = product.image;
+                return (
+                  <ShopItem
+                    key={product.id}
+                    id={product.id}
+                    album={product.album}
+                    artist={product.artist}
+                    image={image}
+                    price={price}
+                    cartView={false}
+                  />
+                );
+              })}
+            </ul>
+            {indexOfNextProductToLoad <= totalResults - RESULTS_PER_PAGE ? (
+              <LoadingArea
+                onVisible={() => {
+                  loadNextProducts();
+                }}
               />
-            );
-          })}
-        </ul>
-        {indexOfNextProductToLoad <= totalResults - RESULTS_PER_PAGE ? (
-          <LoadingArea
-            onVisible={() => {
-              loadNextProducts();
-            }}
-          />
-        ) : undefined}
+            ) : undefined}
+          </div>
+        </div>
       </section>
     </>
   );

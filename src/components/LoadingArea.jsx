@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import styles from "../styles/LoadingArea.module.css";
 import loadingIcon from "../assets/loading.svg";
 
-function LoadingArea({ onVisible, delay = 250 }) {
+function LoadingArea({ onVisible, delay = 500 }) {
   const ref = useRef();
   const timeoutRef = useRef();
 
