@@ -6,6 +6,10 @@
   padding: 40px;
 }
 
+.footer h2 {
+  font-family: var(--logo-font), "Urbanist", sans-serif;
+}
+
 .footer ul {
   display: flex;
   flex-direction: column;
