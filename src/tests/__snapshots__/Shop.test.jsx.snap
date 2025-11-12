@@ -17,14 +17,14 @@ exports[`Shop component > Render shop page 1`] = `
         <a
           class="_cart_812fc8"
           data-discover="true"
-          href="/cart"
+          href="/crate"
         >
           <span
             class="_cartCount_812fc8"
           />
           <img
-            alt="cart outline icon"
-            src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M17,18A2,2%200%200,1%2019,20A2,2%200%200,1%2017,22C15.89,22%2015,21.1%2015,20C15,18.89%2015.89,18%2017,18M1,2H4.27L5.21,4H20A1,1%200%200,1%2021,5C21,5.17%2020.95,5.34%2020.88,5.5L17.3,11.97C16.96,12.58%2016.3,13%2015.55,13H8.1L7.2,14.63L7.17,14.75A0.25,0.25%200%200,0%207.42,15H19V17H7C5.89,17%205,16.1%205,15C5,14.65%205.09,14.32%205.24,14.04L6.6,11.59L3,4H1V2M7,18A2,2%200%200,1%209,20A2,2%200%200,1%207,22C5.89,22%205,21.1%205,20C5,18.89%205.89,18%207,18M16,11L18.78,6H6.14L8.5,11H16Z'%20/%3e%3c/svg%3e"
+            alt="crate outline icon"
+            src="/src/assets/crate-outline.png"
           />
         </a>
       </div>
@@ -59,9 +59,9 @@ exports[`Shop component > Render shop page 1`] = `
           <li>
             <a
               data-discover="true"
-              href="/cart"
+              href="/crate"
             >
-              Cart
+              Crate
             </a>
           </li>
         </ul>

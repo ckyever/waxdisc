@@ -99,7 +99,7 @@ const ShopItem = ({
             Remove from cart
           </button>
         ) : (
-          <button type="submit">Add to cart</button>
+          <button type="submit">Add to crate</button>
         )}
       </form>
     </li>

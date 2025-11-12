@@ -2,6 +2,7 @@ import { useOutletContext } from "react-router";
 import ShopItem from "./ShopItem.jsx";
 import styles from "../styles/Cart.module.css";
 import { formatPrice } from "../libs/utils.jsx";
+import crateIcon from "../assets/crate-outline.png";
 
 const Cart = () => {
   const { cart } = useOutletContext();
@@ -9,7 +10,14 @@ const Cart = () => {
 
   return (
     <div className={styles.cartContainer}>
-      <h2 className={styles.title}>Your Cart</h2>
+      <div className={styles.title}>
+        <img
+          className={styles.crateIcon}
+          src={crateIcon}
+          alt="crate outline icon"
+        />
+        <h2>Your Crate</h2>
+      </div>
       {cart.length > 0 ? (
         <>
           <ul className={styles.cart}>
@@ -35,7 +43,7 @@ const Cart = () => {
           <p className={styles.totalPrice}>Total: {formatPrice(totalPrice)}</p>
         </>
       ) : (
-        <p>Your cart is empty</p>
+        <p>Your crate is empty</p>
       )}
     </div>
   );

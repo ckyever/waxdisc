@@ -29,12 +29,12 @@ describe("App component", () => {
     expect(container).toMatchSnapshot();
   });
 
-  test("Visit cart page", async () => {
+  test("Visit crate page", async () => {
     const user = userEvent.setup();
     const router = createMemoryRouter(routes, { initialEntries: ["/"] });
     const { container } = render(<RouterProvider router={router} />);
-    const cartLink = screen.getByRole("link", { name: "Cart" });
-    await user.click(cartLink);
+    const crateLink = screen.getByRole("link", { name: "Crate" });
+    await user.click(crateLink);
     expect(container).toMatchSnapshot();
   });
 

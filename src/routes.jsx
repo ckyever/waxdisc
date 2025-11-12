@@ -33,7 +33,7 @@ const routes = [
         path: "shop/staff-picks",
         element: <Shop endpoint={ENDPOINT.STAFF_PICKS} />,
       },
-      { path: "cart", element: <Cart /> },
+      { path: "crate", element: <Cart /> },
       { path: "product/:productId", element: <Product /> },
       { path: "about", element: <About /> },
     ],

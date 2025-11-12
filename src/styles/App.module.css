@@ -37,7 +37,7 @@
 
 .cartCount {
   position: absolute;
-  top: -16px;
+  top: -24px;
   color: var(--light-text-colour);
   font-size: 1.2rem;
   font-weight: 600;
