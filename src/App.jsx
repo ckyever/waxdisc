@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router";
 import { useState } from "react";
 import styles from "./styles/App.module.css";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -37,6 +38,7 @@ const App = () => {
 
   return (
     <div className={styles.app}>
+      <ScrollToTop />
       <header className={styles.header}>
         <h1>WAXDISC</h1>
         <nav className={styles.navbar}>
