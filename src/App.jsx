@@ -50,6 +50,9 @@ const App = () => {
               <Link to="shop/new-releases">Shop</Link>
             </li>
             <li>
+              <Link to="about">About</Link>
+            </li>
+            <li>
               <Link to="cart">Cart</Link>
             </li>
           </ul>

@@ -4,6 +4,7 @@ import ErrorPage from "./components/ErrorPage.jsx";
 import Home from "./components/Home.jsx";
 import Product from "./components/Product.jsx";
 import Shop from "./components/Shop.jsx";
+import About from "./components/About.jsx";
 import { ENDPOINT } from "./libs/constants.jsx";
 
 const routes = [
@@ -34,6 +35,7 @@ const routes = [
       },
       { path: "cart", element: <Cart /> },
       { path: "product/:productId", element: <Product /> },
+      { path: "about", element: <About /> },
     ],
     errorElement: <ErrorPage />,
   },
