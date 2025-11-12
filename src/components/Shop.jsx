@@ -24,7 +24,9 @@ const Shop = ({ endpoint }) => {
   if (error) return <p>A network error has occurred</p>;
 
   function loadNextProducts() {
-    setIndexOfNextProductToLoad(indexOfNextProductToLoad + RESULTS_PER_PAGE);
+    setIndexOfNextProductToLoad(
+      indexOfNextProductToLoad + RESULTS_PER_PAGE + 1
+    );
   }
 
   return (
