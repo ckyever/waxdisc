@@ -45,18 +45,3 @@
   min-height: 80vh;
   flex: 1;
 }
-
-.footer {
-  background-color: var(--dark-background-colour);
-  color: var(--dark-text-colour);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 40px;
-}
-
-.footer ul {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  list-style: none;
-}
