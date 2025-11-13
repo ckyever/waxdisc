@@ -38,6 +38,9 @@ exports[`App component > Render home page 1`] = `
               alt="crate outline icon"
               src="/src/assets/crate-outline.png"
             />
+            <span>
+              Crate
+            </span>
           </a>
         </div>
       </div>
@@ -101,6 +104,51 @@ exports[`App component > Render home page 1`] = `
               />
             </button>
             <div
+              class="_slides_869c5f"
+              style="transform: translateX(-0%);"
+            >
+              <a
+                class="_heroImage_869c5f"
+                data-discover="true"
+                href="/shop/new-releases"
+              >
+                <img
+                  alt="Interior of a vinyl store with people browsing in soft focus"
+                  src="/src/assets/store-interior-1.jpg"
+                />
+              </a>
+              <a
+                class="_heroImage_869c5f"
+                data-discover="true"
+                href="/product/4osUXHB3fDXwyrtRKvBE2m"
+              >
+                <img
+                  alt="MM..FOOD - MF DOOM vinyl"
+                  src="/src/assets/doom-vinyl.jpg?t=1763021020630"
+                />
+              </a>
+              <a
+                class="_heroImage_869c5f"
+                data-discover="true"
+                href="/product/4osUXHB3fDXwyrtRKvBE2m"
+              >
+                <img
+                  alt="MM..FOOD - MF DOOM vinyl opened up"
+                  src="/src/assets/doom-vinyl-open.jpg?t=1763021020630"
+                />
+              </a>
+              <a
+                class="_heroImage_869c5f"
+                data-discover="true"
+                href="/"
+              >
+                <img
+                  alt="Interior of a vinyl store with people browsing the collection"
+                  src="/src/assets/store-interior-2.jpg?t=1763021020630"
+                />
+              </a>
+            </div>
+            <div
               class="_indicators_869c5f"
             >
               <div
@@ -116,50 +164,6 @@ exports[`App component > Render home page 1`] = `
                 class="_indicator_869c5f "
               />
             </div>
-            <a
-              class="_heroImage_869c5f _visible_869c5f"
-              data-discover="true"
-              href="/"
-            >
-              <img
-                alt="Interior of a vinyl store with people browsing in soft focus"
-                class="_visible_869c5f"
-                src="/src/assets/store-interior-1.jpg"
-              />
-            </a>
-            <a
-              class="_heroImage_869c5f _hidden_869c5f"
-              data-discover="true"
-              href="/product/4osUXHB3fDXwyrtRKvBE2m"
-            >
-              <img
-                alt="MM..FOOD - MF DOOM vinyl"
-                class="_hidden_869c5f"
-                src="/src/assets/doom-vinyl.jpg?t=1763021020630"
-              />
-            </a>
-            <a
-              class="_heroImage_869c5f _hidden_869c5f"
-              data-discover="true"
-              href="/product/4osUXHB3fDXwyrtRKvBE2m"
-            >
-              <img
-                alt="MM..FOOD - MF DOOM vinyl opened up"
-                class="_hidden_869c5f"
-                src="/src/assets/doom-vinyl-open.jpg?t=1763021020630"
-              />
-            </a>
-            <a
-              class="_heroImage_869c5f _hidden_869c5f"
-              data-discover="true"
-              href="/"
-            >
-              <img
-                alt="Interior of a vinyl store with people browsing the collection"
-                class="_hidden_869c5f"
-                src="/src/assets/store-interior-2.jpg?t=1763021020630"
-              />
-            </a>
             <button
               class="_next_869c5f"
             >
@@ -288,6 +292,9 @@ exports[`App component > Visit crate page 1`] = `
               alt="crate outline icon"
               src="/src/assets/crate-outline.png"
             />
+            <span>
+              Crate
+            </span>
           </a>
         </div>
       </div>
@@ -470,6 +477,9 @@ exports[`App component > Visit home page 1`] = `
               alt="crate outline icon"
               src="/src/assets/crate-outline.png"
             />
+            <span>
+              Crate
+            </span>
           </a>
         </div>
       </div>
@@ -533,6 +543,51 @@ exports[`App component > Visit home page 1`] = `
               />
             </button>
             <div
+              class="_slides_869c5f"
+              style="transform: translateX(-0%);"
+            >
+              <a
+                class="_heroImage_869c5f"
+                data-discover="true"
+                href="/shop/new-releases"
+              >
+                <img
+                  alt="Interior of a vinyl store with people browsing in soft focus"
+                  src="/src/assets/store-interior-1.jpg"
+                />
+              </a>
+              <a
+                class="_heroImage_869c5f"
+                data-discover="true"
+                href="/product/4osUXHB3fDXwyrtRKvBE2m"
+              >
+                <img
+                  alt="MM..FOOD - MF DOOM vinyl"
+                  src="/src/assets/doom-vinyl.jpg?t=1763021020630"
+                />
+              </a>
+              <a
+                class="_heroImage_869c5f"
+                data-discover="true"
+                href="/product/4osUXHB3fDXwyrtRKvBE2m"
+              >
+                <img
+                  alt="MM..FOOD - MF DOOM vinyl opened up"
+                  src="/src/assets/doom-vinyl-open.jpg?t=1763021020630"
+                />
+              </a>
+              <a
+                class="_heroImage_869c5f"
+                data-discover="true"
+                href="/"
+              >
+                <img
+                  alt="Interior of a vinyl store with people browsing the collection"
+                  src="/src/assets/store-interior-2.jpg?t=1763021020630"
+                />
+              </a>
+            </div>
+            <div
               class="_indicators_869c5f"
             >
               <div
@@ -548,50 +603,6 @@ exports[`App component > Visit home page 1`] = `
                 class="_indicator_869c5f "
               />
             </div>
-            <a
-              class="_heroImage_869c5f _visible_869c5f"
-              data-discover="true"
-              href="/"
-            >
-              <img
-                alt="Interior of a vinyl store with people browsing in soft focus"
-                class="_visible_869c5f"
-                src="/src/assets/store-interior-1.jpg"
-              />
-            </a>
-            <a
-              class="_heroImage_869c5f _hidden_869c5f"
-              data-discover="true"
-              href="/product/4osUXHB3fDXwyrtRKvBE2m"
-            >
-              <img
-                alt="MM..FOOD - MF DOOM vinyl"
-                class="_hidden_869c5f"
-                src="/src/assets/doom-vinyl.jpg?t=1763021020630"
-              />
-            </a>
-            <a
-              class="_heroImage_869c5f _hidden_869c5f"
-              data-discover="true"
-              href="/product/4osUXHB3fDXwyrtRKvBE2m"
-            >
-              <img
-                alt="MM..FOOD - MF DOOM vinyl opened up"
-                class="_hidden_869c5f"
-                src="/src/assets/doom-vinyl-open.jpg?t=1763021020630"
-              />
-            </a>
-            <a
-              class="_heroImage_869c5f _hidden_869c5f"
-              data-discover="true"
-              href="/"
-            >
-              <img
-                alt="Interior of a vinyl store with people browsing the collection"
-                class="_hidden_869c5f"
-                src="/src/assets/store-interior-2.jpg?t=1763021020630"
-              />
-            </a>
             <button
               class="_next_869c5f"
             >
@@ -728,6 +739,9 @@ exports[`App component > Visit shop page 1`] = `
               alt="crate outline icon"
               src="/src/assets/crate-outline.png"
             />
+            <span>
+              Crate
+            </span>
           </a>
         </div>
       </div>

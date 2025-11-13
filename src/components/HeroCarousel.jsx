@@ -47,6 +47,20 @@ function HeroCarousel({ imageList }) {
       <button className={styles.previous} onClick={previousImage}>
         <img src={previousIcon} alt="previous chevron" />
       </button>
+
+      <div
+        className={styles.slides}
+        style={{ transform: `translateX(-${visibleImageIndex * 100}%)` }}
+      >
+        {imageList.map((image, index) => {
+          return (
+            <Link key={index} className={styles.heroImage} to={image.link}>
+              <img src={image.src} alt={image.alt} />
+            </Link>
+          );
+        })}
+      </div>
+
       <div className={styles.indicators}>
         {imageList.map((_, index) => {
           return (
@@ -59,25 +73,7 @@ function HeroCarousel({ imageList }) {
           );
         })}
       </div>
-      {imageList.map((image, index) => {
-        return (
-          <Link
-            key={index}
-            className={`${styles.heroImage} ${
-              index === visibleImageIndex ? styles.visible : styles.hidden
-            }`}
-            to={image.link}
-          >
-            <img
-              className={
-                index === visibleImageIndex ? styles.visible : styles.hidden
-              }
-              src={image.src}
-              alt={image.alt}
-            />
-          </Link>
-        );
-      })}
+
       <button className={styles.next} onClick={nextImage}>
         <img src={nextIcon} alt="next chevron" />
       </button>

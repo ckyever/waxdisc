@@ -38,6 +38,9 @@ exports[`Shop component > Render shop page 1`] = `
               alt="crate outline icon"
               src="/src/assets/crate-outline.png"
             />
+            <span>
+              Crate
+            </span>
           </a>
         </div>
       </div>
