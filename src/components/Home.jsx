@@ -4,10 +4,10 @@ import styles from "../styles/Home.module.css";
 import { ENDPOINT } from "../libs/constants.jsx";
 import { Link } from "react-router";
 import HeroCarousel from "./HeroCarousel.jsx";
-import storeImage1 from "../assets/store-interior-1.png";
-import storeImage2 from "../assets/store-interior-2.png";
-import featuredVinylImage1 from "../assets/doom-vinyl.png";
-import featuredVinylImage2 from "../assets/doom-vinyl-open.png";
+import storeImage1 from "../assets/store-interior-1.jpg";
+import storeImage2 from "../assets/store-interior-2.jpg";
+import featuredVinylImage1 from "../assets/doom-vinyl.jpg";
+import featuredVinylImage2 from "../assets/doom-vinyl-open.jpg";
 
 function Home() {
   const {

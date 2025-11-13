@@ -95,27 +95,78 @@ exports[`App component > Render home page 1`] = `
             <button
               class="_previous_869c5f"
             >
-              Previous
+              <img
+                alt="previous chevron"
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z'%20fill='rgba(255,%20255,%20255,%200.8)'/%3e%3c/svg%3e"
+              />
             </button>
-            <img
-              alt="Interior of a vinyl store with people browsing in soft focus"
-              class="_visible_869c5f"
-              src="/src/assets/store-interior.jpg"
-            />
-            <img
-              alt="Interior of a vinyl store with people browsing the collection"
-              class="_hidden_869c5f"
-              src="/src/assets/store-interior-2.jpg"
-            />
-            <img
-              alt="MM..FOOD - MF DOOM vinyl"
-              class="_hidden_869c5f"
-              src="/src/assets/doom-vinyl.jpg"
-            />
+            <div
+              class="_indicators_869c5f"
+            >
+              <div
+                class="_indicator_869c5f _selected_869c5f"
+              />
+              <div
+                class="_indicator_869c5f "
+              />
+              <div
+                class="_indicator_869c5f "
+              />
+              <div
+                class="_indicator_869c5f "
+              />
+            </div>
+            <a
+              class="_heroImage_869c5f _visible_869c5f"
+              data-discover="true"
+              href="/"
+            >
+              <img
+                alt="Interior of a vinyl store with people browsing in soft focus"
+                class="_visible_869c5f"
+                src="/src/assets/store-interior-1.jpg"
+              />
+            </a>
+            <a
+              class="_heroImage_869c5f _hidden_869c5f"
+              data-discover="true"
+              href="/product/4osUXHB3fDXwyrtRKvBE2m"
+            >
+              <img
+                alt="MM..FOOD - MF DOOM vinyl"
+                class="_hidden_869c5f"
+                src="/src/assets/doom-vinyl.jpg?t=1763021020630"
+              />
+            </a>
+            <a
+              class="_heroImage_869c5f _hidden_869c5f"
+              data-discover="true"
+              href="/product/4osUXHB3fDXwyrtRKvBE2m"
+            >
+              <img
+                alt="MM..FOOD - MF DOOM vinyl opened up"
+                class="_hidden_869c5f"
+                src="/src/assets/doom-vinyl-open.jpg?t=1763021020630"
+              />
+            </a>
+            <a
+              class="_heroImage_869c5f _hidden_869c5f"
+              data-discover="true"
+              href="/"
+            >
+              <img
+                alt="Interior of a vinyl store with people browsing the collection"
+                class="_hidden_869c5f"
+                src="/src/assets/store-interior-2.jpg?t=1763021020630"
+              />
+            </a>
             <button
               class="_next_869c5f"
             >
-              Next
+              <img
+                alt="next chevron"
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='rgba(255,%20255,%20255,%200.8)'/%3e%3c/svg%3e"
+              />
             </button>
           </div>
           <p>
@@ -476,27 +527,78 @@ exports[`App component > Visit home page 1`] = `
             <button
               class="_previous_869c5f"
             >
-              Previous
+              <img
+                alt="previous chevron"
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z'%20fill='rgba(255,%20255,%20255,%200.8)'/%3e%3c/svg%3e"
+              />
             </button>
-            <img
-              alt="Interior of a vinyl store with people browsing in soft focus"
-              class="_visible_869c5f"
-              src="/src/assets/store-interior.jpg"
-            />
-            <img
-              alt="Interior of a vinyl store with people browsing the collection"
-              class="_hidden_869c5f"
-              src="/src/assets/store-interior-2.jpg"
-            />
-            <img
-              alt="MM..FOOD - MF DOOM vinyl"
-              class="_hidden_869c5f"
-              src="/src/assets/doom-vinyl.jpg"
-            />
+            <div
+              class="_indicators_869c5f"
+            >
+              <div
+                class="_indicator_869c5f _selected_869c5f"
+              />
+              <div
+                class="_indicator_869c5f "
+              />
+              <div
+                class="_indicator_869c5f "
+              />
+              <div
+                class="_indicator_869c5f "
+              />
+            </div>
+            <a
+              class="_heroImage_869c5f _visible_869c5f"
+              data-discover="true"
+              href="/"
+            >
+              <img
+                alt="Interior of a vinyl store with people browsing in soft focus"
+                class="_visible_869c5f"
+                src="/src/assets/store-interior-1.jpg"
+              />
+            </a>
+            <a
+              class="_heroImage_869c5f _hidden_869c5f"
+              data-discover="true"
+              href="/product/4osUXHB3fDXwyrtRKvBE2m"
+            >
+              <img
+                alt="MM..FOOD - MF DOOM vinyl"
+                class="_hidden_869c5f"
+                src="/src/assets/doom-vinyl.jpg?t=1763021020630"
+              />
+            </a>
+            <a
+              class="_heroImage_869c5f _hidden_869c5f"
+              data-discover="true"
+              href="/product/4osUXHB3fDXwyrtRKvBE2m"
+            >
+              <img
+                alt="MM..FOOD - MF DOOM vinyl opened up"
+                class="_hidden_869c5f"
+                src="/src/assets/doom-vinyl-open.jpg?t=1763021020630"
+              />
+            </a>
+            <a
+              class="_heroImage_869c5f _hidden_869c5f"
+              data-discover="true"
+              href="/"
+            >
+              <img
+                alt="Interior of a vinyl store with people browsing the collection"
+                class="_hidden_869c5f"
+                src="/src/assets/store-interior-2.jpg?t=1763021020630"
+              />
+            </a>
             <button
               class="_next_869c5f"
             >
-              Next
+              <img
+                alt="next chevron"
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='rgba(255,%20255,%20255,%200.8)'/%3e%3c/svg%3e"
+              />
             </button>
           </div>
           <p>
