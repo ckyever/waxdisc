@@ -5,11 +5,12 @@
   gap: 24px;
 }
 
-.storeImageContainer {
+.homeImageContainer {
   position: relative;
+  width: 100%;
 }
 
-.storeImageOverlay {
+.homeImageOverlay {
   position: absolute;
   inset: 0;
   height: 100%;
@@ -21,7 +22,7 @@
   align-items: center;
 }
 
-.storeImageOverlay p {
+.homeImageOverlay p {
   font-size: 4rem;
   font-weight: 600;
   color: var(--dark-text-colour);

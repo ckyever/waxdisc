@@ -32,9 +32,13 @@ function Home() {
 
   return (
     <div className={styles.home}>
-      <div className={styles.storeImageContainer}>
-        <img src={storeImage} alt="Interior of a vinyl store" />
-        <div className={styles.storeImageOverlay}>
+      <div className={styles.homeImageContainer}>
+        <img
+          className={styles.homeImage}
+          src={storeImage}
+          alt="Interior of a vinyl store"
+        />
+        <div className={styles.homeImageOverlay}>
           <p>New vinyls every week</p>
           <br />
           <p>Open everyday: 10am - 6pm</p>
