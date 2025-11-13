@@ -38,6 +38,7 @@ function Home() {
     {
       src: storeImage1,
       alt: "Interior of a vinyl store with people browsing in soft focus",
+      link: "/shop/new-releases",
     },
     {
       src: featuredVinylImage1,

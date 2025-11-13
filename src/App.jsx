@@ -66,6 +66,7 @@ const App = () => {
                 {cartTotal > 0 ? cartTotal : undefined}
               </span>
               <img src={crateIcon} alt="crate outline icon" />
+              <span>Crate</span>
             </Link>
           </div>
         </div>

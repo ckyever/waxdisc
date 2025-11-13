@@ -54,6 +54,8 @@
   top: 40px;
   right: 40px;
   text-decoration: none;
+  color: var(--light-text-colour);
+  font-weight: 700;
 }
 
 .cartCount {
@@ -61,7 +63,6 @@
   top: -24px;
   color: var(--light-text-colour);
   font-size: 1.2rem;
-  font-weight: 600;
 }
 
 .cart img {
