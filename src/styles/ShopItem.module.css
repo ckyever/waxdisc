@@ -60,7 +60,6 @@
 .quantityForm {
   display: flex;
   align-items: flex-end;
-  gap: 4px;
   --border-style: 1px solid lightgrey;
 }
 

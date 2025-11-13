@@ -124,7 +124,7 @@ exports[`App component > Render home page 1`] = `
               >
                 <img
                   alt="MM..FOOD - MF DOOM vinyl"
-                  src="/src/assets/doom-vinyl.jpg?t=1763021020630"
+                  src="/src/assets/doom-vinyl.jpg"
                 />
               </a>
               <a
@@ -134,7 +134,7 @@ exports[`App component > Render home page 1`] = `
               >
                 <img
                   alt="MM..FOOD - MF DOOM vinyl opened up"
-                  src="/src/assets/doom-vinyl-open.jpg?t=1763021020630"
+                  src="/src/assets/doom-vinyl-open.jpg"
                 />
               </a>
               <a
@@ -144,7 +144,7 @@ exports[`App component > Render home page 1`] = `
               >
                 <img
                   alt="Interior of a vinyl store with people browsing the collection"
-                  src="/src/assets/store-interior-2.jpg?t=1763021020630"
+                  src="/src/assets/store-interior-2.jpg"
                 />
               </a>
             </div>
@@ -563,7 +563,7 @@ exports[`App component > Visit home page 1`] = `
               >
                 <img
                   alt="MM..FOOD - MF DOOM vinyl"
-                  src="/src/assets/doom-vinyl.jpg?t=1763021020630"
+                  src="/src/assets/doom-vinyl.jpg"
                 />
               </a>
               <a
@@ -573,7 +573,7 @@ exports[`App component > Visit home page 1`] = `
               >
                 <img
                   alt="MM..FOOD - MF DOOM vinyl opened up"
-                  src="/src/assets/doom-vinyl-open.jpg?t=1763021020630"
+                  src="/src/assets/doom-vinyl-open.jpg"
                 />
               </a>
               <a
@@ -583,7 +583,7 @@ exports[`App component > Visit home page 1`] = `
               >
                 <img
                   alt="Interior of a vinyl store with people browsing the collection"
-                  src="/src/assets/store-interior-2.jpg?t=1763021020630"
+                  src="/src/assets/store-interior-2.jpg"
                 />
               </a>
             </div>
