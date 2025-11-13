@@ -46,6 +46,24 @@ const ShopItem = ({
     }
   };
 
+  const decrementQuantity = () => {
+    const newQuantity = quantity - 1;
+    if (quantity > 1) {
+      setQuantity(newQuantity);
+      if (cartView) {
+        updateQuantityOfProductFromCart(id, newQuantity);
+      }
+    }
+  };
+
+  const incrementQuantity = () => {
+    const newQuantity = quantity + 1;
+    setQuantity(newQuantity);
+    if (cartView) {
+      updateQuantityOfProductFromCart(id, newQuantity);
+    }
+  };
+
   return (
     <li key={id} className={cartView ? styles.cartItem : styles.shopItem}>
       {cartView ? (
@@ -85,18 +103,39 @@ const ShopItem = ({
           handleAddToCart(event, id, album, artist, price, quantity, image)
         }
       >
-        <label htmlFor={`${id}-quantity`}>Quantity</label>
-        <input
-          className={styles.quantityField}
-          type="number"
-          min={1}
-          id={`${id}-quantity`}
-          defaultValue={initialQuantity}
-          onChange={(event) => handleQuantityUpdate(event)}
-        ></input>
+        <div>
+          <label className={styles.quantityLabel} htmlFor={`${id}-quantity`}>
+            {" "}
+            Quantity{" "}
+          </label>
+          <div className={styles.quantityEdit}>
+            <button
+              className={styles.quantityButton}
+              type="button"
+              onClick={() => decrementQuantity()}
+            >
+              -
+            </button>
+            <input
+              className={styles.quantityField}
+              type="number"
+              min={1}
+              id={`${id}-quantity`}
+              value={quantity}
+              onChange={(event) => handleQuantityUpdate(event)}
+            ></input>
+            <button
+              className={styles.quantityButton}
+              type="button"
+              onClick={() => incrementQuantity()}
+            >
+              +
+            </button>
+          </div>
+        </div>
         {cartView ? (
           <button type="button" onClick={() => deleteProductFromCart(id)}>
-            Remove from cart
+            Remove from crate
           </button>
         ) : (
           <button type="submit">Add to crate</button>
