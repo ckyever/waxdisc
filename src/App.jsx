@@ -52,20 +52,22 @@ const App = () => {
       <ScrollToTop />
       <header className={styles.header}>
         <div className={styles.title}>
-          <div className={styles.storeName}>
-            <img
-              className={styles.logo}
-              src={waxdiscLogo}
-              alt="vinyl record with tonearm and stylus on it"
-            ></img>
-            <h1>WAXDISC</h1>
+          <div className={styles.layoutContainer}>
+            <div className={styles.storeName}>
+              <img
+                className={styles.logo}
+                src={waxdiscLogo}
+                alt="vinyl record with tonearm and stylus on it"
+              ></img>
+              <h1>WAXDISC</h1>
+            </div>
+            <Link className={styles.cart} to="crate">
+              <span className={styles.cartCount}>
+                {cartTotal > 0 ? cartTotal : undefined}
+              </span>
+              <img src={crateIcon} alt="crate outline icon" />
+            </Link>
           </div>
-          <Link className={styles.cart} to="crate">
-            <span className={styles.cartCount}>
-              {cartTotal > 0 ? cartTotal : undefined}
-            </span>
-            <img src={crateIcon} alt="crate outline icon" />
-          </Link>
         </div>
         <nav className={styles.navbar}>
           <ul>
@@ -85,14 +87,16 @@ const App = () => {
         </nav>
       </header>
       <main className={styles.content}>
-        <Outlet
-          context={{
-            cart,
-            addProductToCart,
-            deleteProductFromCart,
-            updateQuantityOfProductFromCart,
-          }}
-        />
+        <div className={styles.layoutContainer}>
+          <Outlet
+            context={{
+              cart,
+              addProductToCart,
+              deleteProductFromCart,
+              updateQuantityOfProductFromCart,
+            }}
+          />
+        </div>
       </main>
       <Footer />
     </div>

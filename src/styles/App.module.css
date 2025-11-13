@@ -3,6 +3,15 @@
   flex-direction: column;
 }
 
+.layoutContainer {
+  width: 100%;
+  max-width: var(--content-max-width);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 40px;
+}
+
 .header {
   background-color: var(--accent-colour);
   color: var(--light-text-colour);
@@ -42,6 +51,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  top: 40px;
   right: 40px;
   text-decoration: none;
 }
@@ -82,7 +92,9 @@
 }
 
 .content {
-  padding: 40px 40px;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
   min-height: 80vh;
   flex: 1;
 }
