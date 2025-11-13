@@ -6,23 +6,33 @@ exports[`Home component > Home page renders 1`] = `
     class="_home_621afd"
   >
     <div
-      class="_storeImageContainer_621afd"
+      class="_heroCarousel_869c5f"
     >
+      <button
+        class="_previous_869c5f"
+      >
+        Previous
+      </button>
       <img
-        alt="Interior of a vinyl store"
+        alt="Interior of a vinyl store with people browsing in soft focus"
+        class="_visible_869c5f"
         src="/src/assets/store-interior.jpg"
       />
-      <div
-        class="_storeImageOverlay_621afd"
+      <img
+        alt="Interior of a vinyl store with people browsing the collection"
+        class="_hidden_869c5f"
+        src="/src/assets/store-interior-2.jpg"
+      />
+      <img
+        alt="MM..FOOD - MF DOOM vinyl"
+        class="_hidden_869c5f"
+        src="/src/assets/doom-vinyl.jpg"
+      />
+      <button
+        class="_next_869c5f"
       >
-        <p>
-          New vinyls every week
-        </p>
-        <br />
-        <p>
-          Open everyday: 10am - 6pm
-        </p>
-      </div>
+        Next
+      </button>
     </div>
     <p>
       Loading...

@@ -3,7 +3,11 @@ import { useProducts } from "./Data";
 import styles from "../styles/Home.module.css";
 import { ENDPOINT } from "../libs/constants.jsx";
 import { Link } from "react-router";
-import storeImage from "../assets/store-interior.jpg";
+import HeroCarousel from "./HeroCarousel.jsx";
+import storeImage1 from "../assets/store-interior.jpg";
+import storeImage2 from "../assets/store-interior-2.jpg";
+import featuredVinylImage1 from "../assets/doom-vinyl.jpg";
+import featuredVinylImage2 from "../assets/doom-vinyl-open.jpg";
 
 function Home() {
   const {
@@ -30,20 +34,30 @@ function Home() {
     loading: staffPicksLoading,
   } = useProducts(ENDPOINT.STAFF_PICKS, 5);
 
+  const heroImages = [
+    {
+      src: storeImage1,
+      alt: "Interior of a vinyl store with people browsing in soft focus",
+    },
+    {
+      src: featuredVinylImage1,
+      alt: "MM..FOOD - MF DOOM vinyl",
+      link: "/product/4osUXHB3fDXwyrtRKvBE2m",
+    },
+    {
+      src: featuredVinylImage2,
+      alt: "MM..FOOD - MF DOOM vinyl opened up",
+      link: "/product/4osUXHB3fDXwyrtRKvBE2m",
+    },
+    {
+      src: storeImage2,
+      alt: "Interior of a vinyl store with people browsing the collection",
+    },
+  ];
+
   return (
     <div className={styles.home}>
-      <div className={styles.homeImageContainer}>
-        <img
-          className={styles.homeImage}
-          src={storeImage}
-          alt="Interior of a vinyl store"
-        />
-        <div className={styles.homeImageOverlay}>
-          <p>New vinyls every week</p>
-          <br />
-          <p>Open everyday: 10am - 6pm</p>
-        </div>
-      </div>
+      <HeroCarousel imageList={heroImages} />
       {newReleaseLoading &&
       bestSellersLoading &&
       popularLoading &&
