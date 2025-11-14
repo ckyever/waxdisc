@@ -4,7 +4,8 @@ import styles from "./styles/App.module.css";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import Footer from "./components/Footer.jsx";
 import crateIcon from "./assets/crate-outline.png";
-import waxdiscLogo from "/waxdisc-logo.png";
+import waxdiscRecordLogo from "./assets/waxdisc-logo-record.png";
+import waxdiscTonearmLogo from "./assets/waxdisc-logo-tonearm.png";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -54,11 +55,18 @@ const App = () => {
         <div className={styles.title}>
           <div className={styles.layoutContainer}>
             <div className={styles.storeName}>
-              <img
-                className={styles.logo}
-                src={waxdiscLogo}
-                alt="vinyl record with tonearm and stylus on it"
-              ></img>
+              <div className={styles.logo}>
+                <img
+                  className={styles.recordLogo}
+                  src={waxdiscRecordLogo}
+                  alt="WAXDISC vinyl record logo"
+                ></img>
+                <img
+                  className={styles.tonearmLogo}
+                  src={waxdiscTonearmLogo}
+                  alt="tonearm"
+                ></img>
+              </div>
               <h1>WAXDISC</h1>
             </div>
             <Link className={styles.cart} to="crate">
