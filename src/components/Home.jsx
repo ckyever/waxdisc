@@ -8,6 +8,7 @@ import storeImage1 from "../assets/store-interior-1.jpg";
 import storeImage2 from "../assets/store-interior-2.jpg";
 import featuredVinylImage1 from "../assets/doom-vinyl.jpg";
 import featuredVinylImage2 from "../assets/doom-vinyl-open.jpg";
+import Loading from "../components/Loading.jsx";
 
 function Home() {
   const {
@@ -64,7 +65,7 @@ function Home() {
       bestSellersLoading &&
       popularLoading &&
       staffPicksLoading ? (
-        <p>Loading...</p>
+        <Loading />
       ) : newReleaseError &&
         bestSellersError &&
         popularError &&

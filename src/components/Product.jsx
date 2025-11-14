@@ -8,6 +8,7 @@ import {
   isoDateToString,
 } from "../libs/utils.jsx";
 import styles from "../styles/Product.module.css";
+import Loading from "../components/Loading.jsx";
 
 const Product = () => {
   const { productId } = useParams();
@@ -47,7 +48,7 @@ const Product = () => {
   return (
     <div className={styles.content}>
       {loading ? (
-        <p>Loading...</p>
+        <Loading />
       ) : error ? (
         <p>A network error has occurred</p>
       ) : (

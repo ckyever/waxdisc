@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import styles from "../styles/LoadingArea.module.css";
-import loadingIcon from "../assets/loading.svg";
+import Loading from "../components/Loading.jsx";
 
 function LoadingArea({ onVisible, delay = 500 }) {
   const ref = useRef();
@@ -33,11 +33,7 @@ function LoadingArea({ onVisible, delay = 500 }) {
 
   return (
     <div ref={ref} className={styles.loadingArea}>
-      <img
-        className={styles.loadingIcon}
-        src={loadingIcon}
-        alt="loading icon"
-      />
+      <Loading />
     </div>
   );
 }

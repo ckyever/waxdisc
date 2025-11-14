@@ -6,6 +6,7 @@ import { getRandomPriceFromSeed } from "../libs/utils.jsx";
 import LoadingArea from "./LoadingArea.jsx";
 import { Link } from "react-router";
 import { ENDPOINT } from "../libs/constants.jsx";
+import Loading from "../components/Loading.jsx";
 
 const RESULTS_PER_PAGE = 48;
 
@@ -27,7 +28,7 @@ const Shop = ({ endpoint }) => {
     setDisplayedProducts([...displayedProducts, ...products]);
   }, [products]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loading />;
   if (error) return <p>A network error has occurred</p>;
 
   function loadNextProducts() {
@@ -39,7 +40,6 @@ const Shop = ({ endpoint }) => {
   return (
     <>
       <section className={styles.shop}>
-        <h2>Products</h2>
         <div className={styles.content}>
           <ul className={styles.sidebar}>
             <li>
@@ -67,7 +67,7 @@ const Shop = ({ endpoint }) => {
               </Link>
             </li>
           </ul>
-          <div>
+          <div className={styles.productContainer}>
             <ul className={styles.products}>
               {displayedProducts.map((product) => {
                 // Using a seed ensures the price remains the same on refresh
