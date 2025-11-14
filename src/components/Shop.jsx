@@ -5,6 +5,7 @@ import styles from "../styles/Shop.module.css";
 import { getRandomPriceFromSeed } from "../libs/utils.jsx";
 import LoadingArea from "./LoadingArea.jsx";
 import { Link } from "react-router";
+import { ENDPOINT } from "../libs/constants.jsx";
 
 const RESULTS_PER_PAGE = 48;
 
@@ -42,21 +43,25 @@ const Shop = ({ endpoint }) => {
         <div className={styles.content}>
           <ul className={styles.sidebar}>
             <li>
+              {endpoint === ENDPOINT.NEW_RELEASES ? <span>*</span> : undefined}
               <Link to="/shop/new-releases">
                 <p>New Releases</p>
               </Link>
             </li>
             <li>
+              {endpoint === ENDPOINT.BEST_SELLERS ? <span>*</span> : undefined}
               <Link to="/shop/best-sellers">
                 <p>Best Sellers</p>
               </Link>
             </li>
             <li>
+              {endpoint === ENDPOINT.POPULAR ? <span>*</span> : undefined}
               <Link to="/shop/popular">
                 <p>Popular</p>
               </Link>
             </li>
             <li>
+              {endpoint === ENDPOINT.STAFF_PICKS ? <span>*</span> : undefined}
               <Link to="/shop/staff-picks">
                 <p>Staff Picks</p>
               </Link>
