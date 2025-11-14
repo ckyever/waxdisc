@@ -104,3 +104,16 @@
   font-weight: 600;
   color: gray;
 }
+
+@media (max-width: 600px) {
+  .product {
+    padding: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .quantity {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
