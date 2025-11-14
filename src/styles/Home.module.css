@@ -36,4 +36,8 @@
     height: 100%;
     overflow-x: auto;
   }
+
+  .previewLink {
+    margin-right: 8px;
+  }
 }
