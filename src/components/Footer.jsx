@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import styles from "../styles/Footer.module.css";
 
 function Footer() {
@@ -11,34 +12,34 @@ function Footer() {
         <ul>
           <h4>Help</h4>
           <li>
-            <a>Track my order</a>
+            <Link to="orders">Track my order</Link>
           </li>
           <li>
-            <a>Returns</a>
+            <Link to="returns">Returns</Link>
           </li>
           <li>
-            <a>Contact us</a>
+            <Link to="contact">Contact us</Link>
           </li>
           <li>
-            <a>Terms and conditions</a>
+            <Link to="terms">Terms and conditions</Link>
           </li>
         </ul>
         <ul>
           <h4>Company</h4>
           <li>
-            <a>About us</a>
+            <Link to="about">About us</Link>
           </li>
           <li>
-            <a>Store location</a>
+            <Link to="store-location">Store location</Link>
           </li>
           <li>
-            <a>Careers</a>
+            <Link to="careers">Careers</Link>
           </li>
           <li>
-            <a>News</a>
+            <Link to="news">News</Link>
           </li>
           <li>
-            <a>Feedback</a>
+            <Link to="feedback">Feedback</Link>
           </li>
         </ul>
       </div>

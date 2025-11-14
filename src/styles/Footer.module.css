@@ -1,3 +1,13 @@
+a {
+  color: var(--dark-text-colour);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .footer {
   display: flex;
   justify-content: center;

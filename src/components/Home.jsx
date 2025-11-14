@@ -53,6 +53,7 @@ function Home() {
     {
       src: storeImage2,
       alt: "Interior of a vinyl store with people browsing the collection",
+      link: "/about",
     },
   ];
 

@@ -5,6 +5,7 @@ import Home from "./components/Home.jsx";
 import Product from "./components/Product.jsx";
 import Shop from "./components/Shop.jsx";
 import About from "./components/About.jsx";
+import Placeholder from "./components/Placeholder.jsx";
 import { ENDPOINT } from "./libs/constants.jsx";
 
 const routes = [
@@ -35,7 +36,15 @@ const routes = [
       },
       { path: "crate", element: <Cart /> },
       { path: "product/:productId", element: <Product /> },
+      { path: "orders", element: <Placeholder /> },
+      { path: "returns", element: <Placeholder /> },
+      { path: "contact", element: <Placeholder /> },
+      { path: "terms", element: <Placeholder /> },
       { path: "about", element: <About /> },
+      { path: "store-location", element: <About /> },
+      { path: "careers", element: <Placeholder /> },
+      { path: "news", element: <Placeholder /> },
+      { path: "feedback", element: <Placeholder /> },
     ],
     errorElement: <ErrorPage />,
   },
