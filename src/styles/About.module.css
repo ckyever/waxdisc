@@ -62,3 +62,29 @@
   font-size: 2rem;
   text-align: center;
 }
+
+@media (max-width: 600px) {
+  .about {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .aboutImageOverlay h2 {
+    margin-left: 10px;
+    font-size: 2rem;
+  }
+
+  .aboutText {
+    margin: 20px 40px;
+    font-size: 0.9rem;
+  }
+
+  .location {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutLocation {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+}

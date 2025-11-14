@@ -36,7 +36,7 @@ function About() {
             alt="Outside view of WAXDISC store with graffiti on it"
           ></img>
         </div>
-        <p>
+        <p className={styles.aboutLocation}>
           123 Vynill St, 3056
           <br />
           Brunswick, Victoria
