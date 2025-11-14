@@ -54,7 +54,7 @@ const App = () => {
       <header className={styles.header}>
         <div className={styles.title}>
           <div className={styles.layoutContainer}>
-            <div className={styles.storeName}>
+            <Link className={styles.storeName} to="/">
               <div className={styles.logo}>
                 <img
                   className={styles.recordLogo}
@@ -68,7 +68,7 @@ const App = () => {
                 ></img>
               </div>
               <h1>WAXDISC</h1>
-            </div>
+            </Link>
             <Link className={styles.cart} to="crate">
               <span className={styles.cartCount}>
                 {cartTotal > 0 ? cartTotal : undefined}

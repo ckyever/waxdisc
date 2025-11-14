@@ -65,6 +65,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--light-text-colour);
+}
+
+.storeName:hover {
+  text-decoration: none;
 }
 
 .cart {
