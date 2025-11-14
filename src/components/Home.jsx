@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Preview from "./Preview.jsx";
 import { useProducts } from "./Data";
 import styles from "../styles/Home.module.css";

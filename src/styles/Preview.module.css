@@ -23,3 +23,14 @@
 .preview li:hover {
   transform: scale(1.05);
 }
+
+@media (max-width: 600px) {
+  .preview {
+    max-width: 80px;
+    height: 100%;
+  }
+
+  .preview li {
+    box-shadow: none;
+  }
+}
