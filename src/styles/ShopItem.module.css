@@ -12,9 +12,13 @@
 }
 
 .cartItem {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 1fr), 25px;
   grid-template-rows: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .imageContainer {
@@ -27,6 +31,10 @@
 
 .productImage {
   box-shadow: var(--album-shadow);
+}
+
+.productLink.imageContainer:hover + .productLink {
+  text-decoration: underline;
 }
 
 .productLink {
@@ -63,11 +71,6 @@
   --border-style: 1px solid lightgrey;
 }
 
-.quantityLabel {
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
 .quantityEdit {
   border-top: var(--border-style);
   border-bottom: var(--border-style);
@@ -79,6 +82,7 @@
   border: none;
   border-right: var(--border-style);
   border-left: var(--border-style);
+  cursor: pointer;
 }
 
 .quantityField {
@@ -86,4 +90,31 @@
   text-align: center;
   flex: 1;
   border: none;
+}
+
+/* Remove spinner from Firefox */
+.quantityField {
+  -moz-appearance: textfield;
+}
+
+/* Remove spinner from Chrome, Safari, Edge */
+.quantityField::-webkit-inner-spin-button,
+.quantityField::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.closeButton {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.closeButton:hover {
+  background-color: #e6e6e6;
 }

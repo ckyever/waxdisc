@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useOutletContext, Link } from "react-router";
 import styles from "../styles/ShopItem.module.css";
 import { formatPrice } from "../libs/utils.jsx";
+import closeIcon from "../assets/close.svg";
 
 const ShopItem = ({
   id,
@@ -98,46 +99,59 @@ const ShopItem = ({
       )}
       <p className={styles.price}>{formatPrice(price)}</p>
       {cartView ? (
-        <form
-          className={styles.quantityForm}
-          onSubmit={(event) =>
-            handleAddToCart(event, id, album, artist, price, quantity, image)
-          }
-        >
-          <div>
-            <label className={styles.quantityLabel} htmlFor={`${id}-quantity`}>
-              {" "}
-              Quantity{" "}
-            </label>
-            <div className={styles.quantityEdit}>
-              <button
-                className={styles.quantityButton}
-                type="button"
-                onClick={() => decrementQuantity()}
+        <>
+          <form
+            className={styles.quantityForm}
+            onSubmit={(event) =>
+              handleAddToCart(event, id, album, artist, price, quantity, image)
+            }
+          >
+            <div>
+              <label
+                className={styles.quantityLabel}
+                htmlFor={`${id}-quantity`}
               >
-                -
-              </button>
-              <input
-                className={styles.quantityField}
-                type="number"
-                min={1}
-                id={`${id}-quantity`}
-                value={quantity}
-                onChange={(event) => handleQuantityUpdate(event)}
-              ></input>
-              <button
-                className={styles.quantityButton}
-                type="button"
-                onClick={() => incrementQuantity()}
-              >
-                +
-              </button>
+                {" "}
+                Quantity{" "}
+              </label>
+              <div className={styles.quantityEdit}>
+                <button
+                  className={styles.quantityButton}
+                  type="button"
+                  onClick={() => decrementQuantity()}
+                >
+                  -
+                </button>
+                <input
+                  className={styles.quantityField}
+                  type="number"
+                  min={1}
+                  id={`${id}-quantity`}
+                  value={quantity}
+                  onChange={(event) => handleQuantityUpdate(event)}
+                ></input>
+                <button
+                  className={styles.quantityButton}
+                  type="button"
+                  onClick={() => incrementQuantity()}
+                >
+                  +
+                </button>
+              </div>
             </div>
-          </div>
-          <button type="button" onClick={() => deleteProductFromCart(id)}>
-            Remove from crate
+          </form>
+          <button
+            className={styles.closeButton}
+            type="button"
+            onClick={() => deleteProductFromCart(id)}
+          >
+            <img
+              className={styles.closeIcon}
+              src={closeIcon}
+              alt="close icon"
+            ></img>
           </button>
-        </form>
+        </>
       ) : undefined}
     </li>
   );
