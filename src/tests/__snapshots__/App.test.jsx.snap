@@ -140,7 +140,7 @@ exports[`App component > Render home page 1`] = `
               <a
                 class="_heroImage_869c5f"
                 data-discover="true"
-                href="/"
+                href="/about"
               >
                 <img
                   alt="Interior of a vinyl store with people browsing the collection"
@@ -198,22 +198,34 @@ exports[`App component > Render home page 1`] = `
             Help
           </h4>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/orders"
+            >
               Track my order
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/returns"
+            >
               Returns
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/contact"
+            >
               Contact us
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/terms"
+            >
               Terms and conditions
             </a>
           </li>
@@ -223,27 +235,42 @@ exports[`App component > Render home page 1`] = `
             Company
           </h4>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/about"
+            >
               About us
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/store-location"
+            >
               Store location
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/careers"
+            >
               Careers
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/news"
+            >
               News
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/feedback"
+            >
               Feedback
             </a>
           </li>
@@ -383,22 +410,34 @@ exports[`App component > Visit crate page 1`] = `
             Help
           </h4>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/orders"
+            >
               Track my order
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/returns"
+            >
               Returns
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/contact"
+            >
               Contact us
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/terms"
+            >
               Terms and conditions
             </a>
           </li>
@@ -408,27 +447,42 @@ exports[`App component > Visit crate page 1`] = `
             Company
           </h4>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/about"
+            >
               About us
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/store-location"
+            >
               Store location
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/careers"
+            >
               Careers
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/news"
+            >
               News
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/feedback"
+            >
               Feedback
             </a>
           </li>
@@ -579,7 +633,7 @@ exports[`App component > Visit home page 1`] = `
               <a
                 class="_heroImage_869c5f"
                 data-discover="true"
-                href="/"
+                href="/about"
               >
                 <img
                   alt="Interior of a vinyl store with people browsing the collection"
@@ -637,22 +691,34 @@ exports[`App component > Visit home page 1`] = `
             Help
           </h4>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/orders"
+            >
               Track my order
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/returns"
+            >
               Returns
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/contact"
+            >
               Contact us
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/terms"
+            >
               Terms and conditions
             </a>
           </li>
@@ -662,27 +728,42 @@ exports[`App component > Visit home page 1`] = `
             Company
           </h4>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/about"
+            >
               About us
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/store-location"
+            >
               Store location
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/careers"
+            >
               Careers
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/news"
+            >
               News
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/feedback"
+            >
               Feedback
             </a>
           </li>
@@ -695,9 +776,24 @@ exports[`App component > Visit home page 1`] = `
 
 exports[`App component > Visit non-existent page 1`] = `
 <div>
-  <p>
-    I think you might be lost 🧐
-  </p>
+  <div
+    class="_container_ffe12d"
+  >
+    <p>
+      I think you might be lost 🧐
+    </p>
+    <a
+      class="_homeLink_ffe12d"
+      data-discover="true"
+      href="/"
+    >
+      <img
+        alt="WAXDISC logo"
+        src="/waxdisc-logo.png"
+      />
+      Return Home
+    </a>
+  </div>
 </div>
 `;
 
@@ -814,22 +910,34 @@ exports[`App component > Visit shop page 1`] = `
             Help
           </h4>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/orders"
+            >
               Track my order
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/returns"
+            >
               Returns
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/contact"
+            >
               Contact us
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/terms"
+            >
               Terms and conditions
             </a>
           </li>
@@ -839,27 +947,42 @@ exports[`App component > Visit shop page 1`] = `
             Company
           </h4>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/about"
+            >
               About us
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/store-location"
+            >
               Store location
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/careers"
+            >
               Careers
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/news"
+            >
               News
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/feedback"
+            >
               Feedback
             </a>
           </li>

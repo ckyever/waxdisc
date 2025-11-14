@@ -113,22 +113,34 @@ exports[`Shop component > Render shop page 1`] = `
             Help
           </h4>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/orders"
+            >
               Track my order
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/returns"
+            >
               Returns
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/contact"
+            >
               Contact us
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/terms"
+            >
               Terms and conditions
             </a>
           </li>
@@ -138,27 +150,42 @@ exports[`Shop component > Render shop page 1`] = `
             Company
           </h4>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/about"
+            >
               About us
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/store-location"
+            >
               Store location
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/careers"
+            >
               Careers
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/news"
+            >
               News
             </a>
           </li>
           <li>
-            <a>
+            <a
+              data-discover="true"
+              href="/feedback"
+            >
               Feedback
             </a>
           </li>
