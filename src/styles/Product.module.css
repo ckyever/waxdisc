@@ -36,11 +36,51 @@
 
 .quantity {
   display: flex;
+  align-items: center;
   gap: 8px;
+  --border-style: 1px solid lightgrey;
+}
+
+.quantityEdit {
+  border-top: var(--border-style);
+  border-bottom: var(--border-style);
+}
+
+.quantityButton {
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  border-right: var(--border-style);
+  border-left: var(--border-style);
+  cursor: pointer;
 }
 
 .quantityField {
   width: 80px;
+  border: none;
+  text-align: center;
+}
+
+/* Remove spinner from Firefox */
+.quantityField {
+  -moz-appearance: textfield;
+}
+
+/* Remove spinner from Chrome, Safari, Edge */
+.quantityField::-webkit-inner-spin-button,
+.quantityField::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.addToCartButton {
+  background-color: var(--dark-background-colour);
+  color: var(--dark-text-colour);
+  border-radius: 16px;
+  width: 140px;
+  cursor: pointer;
+  border: none;
+  padding: 4px;
 }
 
 .separator {

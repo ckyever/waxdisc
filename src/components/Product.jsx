@@ -30,6 +30,14 @@ const Product = () => {
     addProductToCart(id, album, artist, price, quantity, image);
   };
 
+  const decrementQuantity = () => {
+    quantity > 1 && setQuantity(quantity - 1);
+  };
+
+  const incrementQuantity = () => {
+    setQuantity(Number(quantity) + 1);
+  };
+
   let product, price;
   if (products.length > 0) {
     product = products[0];
@@ -64,15 +72,33 @@ const Product = () => {
               }
             >
               <label htmlFor="quantity">Quantity</label>
-              <input
-                className={styles.quantityField}
-                type="number"
-                min={1}
-                id="quantity"
-                defaultValue={1}
-                onChange={(event) => setQuantity(event.target.value)}
-              ></input>
-              <button type="submit">Add to cart</button>
+              <div className={styles.quantityEdit}>
+                <button
+                  className={styles.quantityButton}
+                  type="button"
+                  onClick={() => decrementQuantity()}
+                >
+                  -
+                </button>
+                <input
+                  className={styles.quantityField}
+                  type="number"
+                  min={1}
+                  id="quantity"
+                  value={quantity}
+                  onChange={(event) => setQuantity(event.target.value)}
+                ></input>
+                <button
+                  className={styles.quantityButton}
+                  type="button"
+                  onClick={() => incrementQuantity()}
+                >
+                  +
+                </button>
+              </div>
+              <button className={styles.addToCartButton} type="submit">
+                Add to Crate
+              </button>
             </form>
             <hr className={styles.separator} />
             <p>
