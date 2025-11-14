@@ -4,7 +4,7 @@ import previousIcon from "../assets/chevron-left.svg";
 import nextIcon from "../assets/chevron-right.svg";
 import { Link } from "react-router";
 
-const autoNextInterval = 4000;
+const autoNextInterval = 3000;
 
 function HeroCarousel({ imageList }) {
   const [visibleImageIndex, setVisibleImageIndex] = useState(0);
