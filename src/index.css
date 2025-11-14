@@ -91,3 +91,7 @@ h6 {
   font-family: "Urbanist", sans-serif;
   --logo-font: "Rammetto One";
 }
+
+a:hover {
+  text-underline-offset: 3px;
+}
