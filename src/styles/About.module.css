@@ -6,6 +6,26 @@
 
 .aboutImageContainer {
   position: relative;
+  overflow: hidden;
+}
+
+.aboutImageContainer:hover .aboutImage {
+  transform: scale(1.05);
+}
+
+.aboutImage {
+  animation: zoom 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .aboutImageOverlay {

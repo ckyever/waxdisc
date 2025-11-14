@@ -6,7 +6,11 @@ function About() {
   return (
     <div className={styles.about}>
       <div className={styles.aboutImageContainer}>
-        <img src={aboutImage} alt="WAXDISC team in front of a moving truck" />
+        <img
+          className={styles.aboutImage}
+          src={aboutImage}
+          alt="WAXDISC team in front of a moving truck"
+        />
         <div className={styles.aboutImageOverlay}>
           <h2>
             About
@@ -25,10 +29,13 @@ function About() {
         celebrate music on vinyl.
       </p>
       <div id="location" className={styles.location}>
-        <img
-          src={storeImage}
-          alt="Outside view of WAXDISC store with graffiti on it"
-        ></img>
+        <div className={styles.aboutImageContainer}>
+          <img
+            className={styles.aboutImage}
+            src={storeImage}
+            alt="Outside view of WAXDISC store with graffiti on it"
+          ></img>
+        </div>
         <p>
           123 Vynill St, 3056
           <br />
