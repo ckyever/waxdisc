@@ -10,6 +10,8 @@ const useProducts = (endpoint, limit = 1, offset = 0) => {
   const [loading, setLoading] = useState(true);
   const [totalResults, setTotalResults] = useState(null);
 
+  console.log(spotifyClientSecret);
+
   // First get access token
   useEffect(() => {
     fetch("https://accounts.spotify.com/api/token", {
