@@ -1,5 +1,6 @@
 import styles from "../styles/About.module.css";
 import aboutImage from "../assets/about-image.jpg";
+import storeImage from "../assets/store-front.jpg";
 
 function About() {
   return (
@@ -23,6 +24,21 @@ function About() {
         sound, WAXDISC offers a warm, welcoming space to explore, connect, and
         celebrate music on vinyl.
       </p>
+      <div id="location" className={styles.location}>
+        <img
+          src={storeImage}
+          alt="Outside view of WAXDISC store with graffiti on it"
+        ></img>
+        <p>
+          123 Vynill St, 3056
+          <br />
+          Brunswick, Victoria
+          <br />
+          <br /> Monday - Sunday:
+          <br />
+          10am - 6pm
+        </p>
+      </div>
     </div>
   );
 }
