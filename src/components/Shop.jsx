@@ -7,6 +7,7 @@ import LoadingArea from "./LoadingArea.jsx";
 import { Link } from "react-router";
 import { ENDPOINT } from "../libs/constants.jsx";
 import Loading from "../components/Loading.jsx";
+import { useOutletContext } from "react-router";
 
 const RESULTS_PER_PAGE = 48;
 
@@ -28,6 +29,8 @@ const Shop = ({ endpoint }) => {
     setDisplayedProducts([...displayedProducts, ...products]);
   }, [products]);
 
+  const { isSidebarOpen, setIsSidebarOpen } = useOutletContext();
+
   if (loading) return <Loading />;
   if (error) return <p>A network error has occurred</p>;
 
@@ -41,28 +44,41 @@ const Shop = ({ endpoint }) => {
     <>
       <section className={styles.shop}>
         <div className={styles.content}>
-          <ul className={styles.sidebar}>
+          <ul
+            className={`${styles.sidebar} ${
+              isSidebarOpen ? styles.open : styles.close
+            }`}
+          >
             <li>
               {endpoint === ENDPOINT.NEW_RELEASES ? <span>*</span> : undefined}
-              <Link to="/shop/new-releases">
+              <Link
+                onClick={() => setIsSidebarOpen(false)}
+                to="/shop/new-releases"
+              >
                 <p>New Releases</p>
               </Link>
             </li>
             <li>
               {endpoint === ENDPOINT.BEST_SELLERS ? <span>*</span> : undefined}
-              <Link to="/shop/best-sellers">
+              <Link
+                onClick={() => setIsSidebarOpen(false)}
+                to="/shop/best-sellers"
+              >
                 <p>Best Sellers</p>
               </Link>
             </li>
             <li>
               {endpoint === ENDPOINT.POPULAR ? <span>*</span> : undefined}
-              <Link to="/shop/popular">
+              <Link onClick={() => setIsSidebarOpen(false)} to="/shop/popular">
                 <p>Popular</p>
               </Link>
             </li>
             <li>
               {endpoint === ENDPOINT.STAFF_PICKS ? <span>*</span> : undefined}
-              <Link to="/shop/staff-picks">
+              <Link
+                onClick={() => setIsSidebarOpen(false)}
+                to="/shop/staff-picks"
+              >
                 <p>Staff Picks</p>
               </Link>
             </li>

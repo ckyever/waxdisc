@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router";
+import { Link, Outlet, useLocation } from "react-router";
 import { useState } from "react";
 import styles from "./styles/App.module.css";
 import ScrollToTop from "./components/ScrollToTop.jsx";
@@ -6,9 +6,11 @@ import Footer from "./components/Footer.jsx";
 import crateIcon from "./assets/crate-outline.png";
 import waxdiscRecordLogo from "./assets/waxdisc-logo-record.png";
 import waxdiscTonearmLogo from "./assets/waxdisc-logo-tonearm.png";
+import menuIcon from "./assets/menu.svg";
 
 const App = () => {
   const [cart, setCart] = useState([]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const addProductToCart = (id, album, artist, price, quantity, image) => {
     const quantityNumber = Number(quantity);
@@ -48,6 +50,8 @@ const App = () => {
     return total;
   })();
 
+  const location = useLocation();
+
   return (
     <div className={styles.app}>
       <ScrollToTop />
@@ -79,6 +83,15 @@ const App = () => {
           </div>
         </div>
         <nav className={styles.navbar}>
+          {location.pathname.includes("shop") ? (
+            <button
+              className={styles.sidebarButton}
+              type="button"
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            >
+              <img src={menuIcon} alt="Menu icon"></img>
+            </button>
+          ) : undefined}
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -103,6 +116,8 @@ const App = () => {
               addProductToCart,
               deleteProductFromCart,
               updateQuantityOfProductFromCart,
+              isSidebarOpen,
+              setIsSidebarOpen,
             }}
           />
         </div>

@@ -34,6 +34,10 @@
   gap: 4px;
 }
 
+.sidebar li span {
+  height: 8px;
+}
+
 .productContainer {
   display: flex;
   flex-direction: column;
@@ -47,4 +51,40 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 0;
+}
+
+@media (max-width: 600px) {
+  .shop {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .sidebar {
+    top: 0;
+    left: 0;
+    padding: 20px;
+    position: absolute;
+    height: 100%;
+    min-width: auto;
+    background-color: var(--dark-background-colour);
+    color: var(--dark-text-colour);
+    transition: transform 0.25s ease-in-out;
+  }
+
+  .sidebar a {
+    font-size: 1rem;
+    color: var(--dark-text-colour);
+  }
+
+  .open {
+    transform: translateX(0px);
+  }
+
+  .close {
+    transform: translateX(-200px);
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

@@ -25,6 +25,11 @@
 }
 
 @media (max-width: 600px) {
+  .home {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   .previewContainer {
     min-width: 10px;
     width: 100%;
