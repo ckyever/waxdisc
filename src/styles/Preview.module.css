@@ -16,4 +16,10 @@
 
 .preview li {
   box-shadow: var(--album-shadow);
+  transition: transform 0.2s ease-in-out;
+  will-change: transform;
+}
+
+.preview li:hover {
+  transform: scale(1.05);
 }
