@@ -35,3 +35,15 @@ a:hover {
   justify-items: center;
   padding: 40px 0;
 }
+
+@media (max-width: 600px) {
+  .layoutContainer {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    justify-items: flex-start;
+    padding-left: 40px;
+  }
+  .layoutContainer ul {
+    padding: 0;
+  }
+}

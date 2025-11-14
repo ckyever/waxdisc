@@ -134,3 +134,13 @@
   min-height: 75vh;
   flex: 1;
 }
+
+@media (max-width: 600px) {
+  .title {
+    padding: 10px;
+  }
+
+  .cart {
+    display: none;
+  }
+}
