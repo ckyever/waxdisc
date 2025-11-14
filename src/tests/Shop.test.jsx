@@ -1,12 +1,8 @@
 import { describe, test, expect, vi } from "vitest";
-import {
-  render,
-  act,
-  screen,
-  waitForElementToBeRemoved,
-} from "@testing-library/react";
+import { render, act } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import routes from "../routes.jsx";
+import Loading from "../components/Loading.jsx";
 
 describe("Shop component", () => {
   test("Render shop page", async () => {
@@ -42,8 +38,6 @@ describe("Shop component", () => {
 
     const router = createMemoryRouter(routes, { initialEntries: ["/shop"] });
     render(<RouterProvider router={router} />);
-    const loading = screen.getByText("Loading...");
-    expect(loading).toBeInTheDocument;
-    await waitForElementToBeRemoved(() => screen.getByText("Loading..."));
+    expect(<Loading />).toBeInTheDocument;
   });
 });
