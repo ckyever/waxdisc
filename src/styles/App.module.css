@@ -66,10 +66,13 @@
   justify-content: center;
   align-items: center;
   color: var(--light-text-colour);
+  transition: transform 0.25s ease-in-out;
+  will-change: transform;
 }
 
 .storeName:hover {
   text-decoration: none;
+  transform: scale(1.05);
 }
 
 .cart {
